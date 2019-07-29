@@ -13,3 +13,6 @@ File descriptions:
 3. showpicsCONV.zip - pictures 26-60 (jpg) set in the QR template
 4. template.jpg - template for the QR codes to be added onto the pictures
 5. vbtg.py - Cyberball game with edits and added documentation by Nomi
+6. pictures
+  6.1. stimuli: original photos with new naming scheme: "##(of picture)_##(pairing).jpg"
+  6.2. QR_codes: names from pupil-helpers
