@@ -1,1 +1,9 @@
-script for csv generation of unique QR code combos
+#  reading in image names
+setwd("../stimuli")
+image_list <- list.files()
+
+# reading in QR code names
+setwd("../QR_codes")
+qr_list <- list.files()
+
+qr_counter <- 1
