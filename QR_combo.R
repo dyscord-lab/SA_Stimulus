@@ -41,12 +41,25 @@ install.packages(c("png", "jpeg", "grid", "gridExtra"))
 Packages <- c("png", "jpeg", "grid", "gridExtra")
 lapply(Packages, library, character.only = TRUE)
 
-##### just testing the image printing
+##### just testing the image reading
 setwd("..")
 mark <- readPNG('./pictures/QR_codes/marker_01.png')
 pic <- readJPEG('./pictures/stimuli/01_01.jpg')
 ####
 
-#grid.arrange(rasterGrob(rightup), rasterGrob(blank), rasterGrob(leftup), rasterGrob(blank), rasterGrob(pic), rasterGrob(blank), rasterGrob(rightdown), rasterGrob(blank), rasterGrob(leftdown), ncol=3)
-#grid.arrange(rasterGrob(mark),rasterGrob(pic),ncol=1)
+#for (i in 1:58){
+# }
+
+RUname <- stimuli[1, 2]
+LUname  <- stimuli[1, 3]
+RDname <- stimuli[1, 4]
+LDname <- stimuli[1, 5]
+blank <- readPNG('./pictures/blank.png')
+
+setwd("./pictures/QR_codes")
+
+png(file = "../test.png", width = 10, height = 10, units = "in", res = 300)
+grid.arrange(rasterGrob(readPNG(RUname)), rasterGrob(blank), rasterGrob(readPNG(LUname)), rasterGrob(blank), rasterGrob(blank), rasterGrob(blank), rasterGrob(readPNG(RDname)), rasterGrob(blank), rasterGrob(readPNG(LDname)), ncol=3 )
+dev.off()
+
 
