@@ -1,4 +1,8 @@
-#  reading in image names
+#===========================================================================
+# creating data frame for image generation
+#===========================================================================
+
+# reading in image names
 setwd("../stimuli")
 image_list <- list.files()
 
@@ -10,7 +14,7 @@ qr_list <- list.files()
 stimuli <- data.frame(image_list)
 names(stimuli) <- c("image")
 
-#  filling top right corner with marker 1
+# filling top right corner with marker 1
 stimuli$rightup <- rep("marker_01.png",nrow(stimuli))
 
 # filling top left corner half with marker 2 and half with 3
@@ -28,3 +32,9 @@ stimuli$leftdown[1:14] <- qr_list[7:20]
 stimuli$leftdown[15:29] <- qr_list[7:21]
 stimuli$leftdown[30:43] <- qr_list[7:20]
 stimuli$leftdown[44:58] <- qr_list[7:21]
+
+#===========================================================================
+# creating stimuli using data frame
+#===========================================================================
+install.packages('TeachingDemos')
+library(TeachingDemos)
