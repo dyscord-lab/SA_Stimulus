@@ -41,12 +41,6 @@ install.packages(c("png", "jpeg", "grid", "gridExtra"))
 Packages <- c("png", "jpeg", "grid", "gridExtra")
 lapply(Packages, library, character.only = TRUE)
 
-##### just testing the image reading
-setwd("..")
-mark <- readPNG('./pictures/QR_codes/marker_01.png')
-pic <- readJPEG('./pictures/stimuli/01_01.jpg')
-####
-
 #for (i in 1:58){
 # }
 
@@ -61,8 +55,7 @@ blank <- readPNG('./pictures/blank.png')
 
 #reading in stimuli image
 imagename <- stimuli[1, 1]
-setwd("../")
-setwd("./stimuli")
+setwd("../stimuli")
 image <- readJPEG(imagename)
 
 # creating grid image, reading the QR PNG images at the same time
