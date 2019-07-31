@@ -39,13 +39,7 @@ stimuli$leftdown[44:58] <- qr_list[7:21]
 
 install.packages(c("png", "jpeg", "grid", "gridExtra"))
 Packages <- c("png", "jpeg", "grid", "gridExtra")
-
 lapply(Packages, library, character.only = TRUE)
-
-#library(png)
-#library(jpeg)
-#library(grid)
-#library(gridExtra)
 
 ##### just testing the image printing
 setwd("..")
