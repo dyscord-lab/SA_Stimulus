@@ -3,7 +3,7 @@
 #===========================================================================
 
 # reading in image names
-setwd("../stimuli")
+setwd("./stimulus/pictures/stimuli")
 image_list <- list.files()
 
 # reading in QR code names
@@ -37,8 +37,8 @@ stimuli$leftdown[44:58] <- qr_list[7:21]
 # creating stimuli using data frame
 #===========================================================================
 
-install.packages(c("png", "jpeg", "grid", "gridExtra"))
-Packages <- c("png", "jpeg", "grid", "gridExtra")
+install.packages(c("png", "jpeg", "grid", "gridExtra", "ggplot2"))
+Packages <- c("png", "jpeg", "grid", "gridExtra", "ggplot2")
 lapply(Packages, library, character.only = TRUE)
 
 #for (i in 1:58){
@@ -51,7 +51,7 @@ RDname <- stimuli[1, 4]
 LDname <- stimuli[1, 5]
 
 # reading in blank image
-blank <- readPNG('./pictures/blank.png')
+blank <- readPNG('../blank.png')
 
 #reading in stimuli image
 imagename <- stimuli[1, 1]
@@ -59,7 +59,9 @@ setwd("../stimuli")
 image <- readJPEG(imagename)
 
 # creating grid image, reading the QR PNG images at the same time
+
 setwd("../QR_codes")
-grid.arrange(rasterGrob(readPNG(RUname)), rasterGrob(blank), rasterGrob(readPNG(LUname)), rasterGrob(blank), rasterGrob(blank), rasterGrob(blank), rasterGrob(readPNG(RDname)), rasterGrob(blank), rasterGrob(readPNG(LDname)), ncol=3 )
-png(file = "../test.png", width = 10, height = 10, units = "in", res = 300)
+g <- arrangeGrob(rasterGrob(readPNG(RUname)), rasterGrob(blank), rasterGrob(readPNG(LUname)), rasterGrob(blank), rasterGrob(image), rasterGrob(blank), rasterGrob(readPNG(RDname)), rasterGrob(blank), rasterGrob(readPNG(LDname)), ncol=3, widths = c(1,5,1), heights = c(1,2,1))
+mypath <- "../final_images/"
+ggsave(file = paste0(mypath, "image_", ".png"), g)
 dev.off()
