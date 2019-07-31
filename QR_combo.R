@@ -11,7 +11,7 @@ setwd("../QR_codes")
 qr_list <- list.files()
 
 # adding image names to  csv
-stimuli <- data.frame(image_list)
+stimuli <- data.frame(image_list, stringsAsFactors = FALSE)
 names(stimuli) <- c("image")
 
 # filling top right corner with marker 1
@@ -50,16 +50,23 @@ pic <- readJPEG('./pictures/stimuli/01_01.jpg')
 #for (i in 1:58){
 # }
 
+# identifying names of unique QR markers
 RUname <- stimuli[1, 2]
 LUname  <- stimuli[1, 3]
 RDname <- stimuli[1, 4]
 LDname <- stimuli[1, 5]
+
+# reading in blank image
 blank <- readPNG('./pictures/blank.png')
 
-setwd("./pictures/QR_codes")
+#reading in stimuli image
+imagename <- stimuli[1, 1]
+setwd("../")
+setwd("./stimuli")
+image <- readJPEG(imagename)
 
-png(file = "../test.png", width = 10, height = 10, units = "in", res = 300)
+# creating grid image, reading the QR PNG images at the same time
+setwd("../QR_codes")
 grid.arrange(rasterGrob(readPNG(RUname)), rasterGrob(blank), rasterGrob(readPNG(LUname)), rasterGrob(blank), rasterGrob(blank), rasterGrob(blank), rasterGrob(readPNG(RDname)), rasterGrob(blank), rasterGrob(readPNG(LDname)), ncol=3 )
+png(file = "../test.png", width = 10, height = 10, units = "in", res = 300)
 dev.off()
-
-
