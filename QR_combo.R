@@ -6,8 +6,6 @@ image_list <- list.files()
 setwd("../QR_codes")
 qr_list <- list.files()
 
-qr_counter <- 1
-
 # adding image names to  csv
 stimuli <- data.frame(image_list)
 names(stimuli) <- c("image")
