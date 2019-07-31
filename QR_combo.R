@@ -36,5 +36,23 @@ stimuli$leftdown[44:58] <- qr_list[7:21]
 #===========================================================================
 # creating stimuli using data frame
 #===========================================================================
-install.packages('TeachingDemos')
-library(TeachingDemos)
+
+install.packages(c("png", "jpeg", "grid", "gridExtra"))
+Packages <- c("png", "jpeg", "grid", "gridExtra")
+
+lapply(Packages, library, character.only = TRUE)
+
+#library(png)
+#library(jpeg)
+#library(grid)
+#library(gridExtra)
+
+##### just testing the image printing
+setwd("..")
+mark <- readPNG('./pictures/QR_codes/marker_01.png')
+pic <- readJPEG('./pictures/stimuli/01_01.jpg')
+####
+
+#grid.arrange(rasterGrob(rightup), rasterGrob(blank), rasterGrob(leftup), rasterGrob(blank), rasterGrob(pic), rasterGrob(blank), rasterGrob(rightdown), rasterGrob(blank), rasterGrob(leftdown), ncol=3)
+#grid.arrange(rasterGrob(mark),rasterGrob(pic),ncol=1)
+
