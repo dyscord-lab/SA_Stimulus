@@ -61,7 +61,10 @@ image <- readJPEG(imagename)
 
 # creating grid image, READING the QR PNG images at the same time
 setwd("../QR_codes")
-g <- arrangeGrob(rasterGrob(readPNG(RUname)), rasterGrob(blank), rasterGrob(readPNG(LUname)), rasterGrob(blank), rasterGrob(image), rasterGrob(blank), rasterGrob(readPNG(RDname)), rasterGrob(blank), rasterGrob(readPNG(LDname)), ncol=3, widths = c(1,5,1), heights = c(1,2,1))
+g <- arrangeGrob(rasterGrob(readPNG(RUname)), rasterGrob(blank), rasterGrob(readPNG(LUname)), 
+                 rasterGrob(blank), rasterGrob(image), rasterGrob(blank), 
+                 rasterGrob(readPNG(RDname)), rasterGrob(blank), rasterGrob(readPNG(LDname)), 
+                 ncol=3, widths = c(.5,5,.5), heights = c(.5,2,.5))
 mypath <- "../final_images/"
 ggsave(file = paste0(mypath, "image_", ".png"), g) # will have "image_", i, ".png" here to have unique file names
 dev.off()
