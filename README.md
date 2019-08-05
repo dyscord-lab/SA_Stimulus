@@ -8,4 +8,5 @@ File descriptions:
   - stimuli: original photos with new naming scheme
   "##(of picture)-##(pairing).jpg"
   - QR_codes: names from pupil-helpers
-4. QR_combo.R - script for unique pairs of QR markers for each stimulus photo
+4. images: stimuli with respective QR codes for experiment
+5. QR_combo.R - script for unique pairs of QR markers for each stimulus photo
