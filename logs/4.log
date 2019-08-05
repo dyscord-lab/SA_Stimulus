@@ -1,0 +1,500 @@
+12.4763 	DATA 	START
+12.4764 	DATA 	Intro Survey
+13.1295 	DATA 	Keypress: space
+13.8222 	DATA 	Keypress: space
+15.0882 	DATA 	Mouse: Left button down, pos=(828,342)
+15.1933 	DATA 	Mouse:  Left button up, pos=(828,342)
+16.4108 	DATA 	Keypress: return
+16.4111 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+16.4114 	DATA 	RatingScale unnamed RatingScale: rating RT=3.199
+16.4114 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 1.881), ('       3:\nmoderately', 3.198)]
+16.4192 	DATA 	Question Number: 19 , Response:        3:
+moderately
+18.4360 	DATA 	Mouse: Left button down, pos=(840,339)
+18.5923 	DATA 	Mouse:  Left button up, pos=(840,339)
+18.6881 	DATA 	Keypress: return
+18.6943 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+18.6945 	DATA 	RatingScale unnamed RatingScale: rating RT=2.229
+18.6946 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 1.977), ('       3:\nmoderately', 2.229)]
+18.7025 	DATA 	Question Number: 13 , Response:        3:
+moderately
+18.9861 	DATA 	Mouse: Left button down, pos=(840,339)
+19.1533 	DATA 	Mouse:  Left button up, pos=(840,339)
+19.2703 	DATA 	Keypress: return
+19.2767 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+19.2769 	DATA 	RatingScale unnamed RatingScale: rating RT=0.529
+19.2769 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.245), ('       3:\nmoderately', 0.529)]
+19.2856 	DATA 	Question Number: 20 , Response:        3:
+moderately
+19.4856 	DATA 	Mouse: Left button down, pos=(840,339)
+19.7100 	DATA 	Mouse:  Left button up, pos=(840,339)
+19.8431 	DATA 	Keypress: return
+19.8434 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+19.8436 	DATA 	RatingScale unnamed RatingScale: rating RT=0.515
+19.8436 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.163), ('       3:\nmoderately', 0.515)]
+19.8525 	DATA 	Question Number: 10 , Response:        3:
+moderately
+20.1033 	DATA 	Mouse: Left button down, pos=(840,339)
+20.2919 	DATA 	Mouse:  Left button up, pos=(840,339)
+20.4105 	DATA 	Keypress: return
+20.4107 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+20.4109 	DATA 	RatingScale unnamed RatingScale: rating RT=0.516
+20.4110 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.215), ('       3:\nmoderately', 0.516)]
+20.4188 	DATA 	Question Number: 11 , Response:        3:
+moderately
+20.6526 	DATA 	Mouse: Left button down, pos=(840,339)
+20.8703 	DATA 	Mouse:  Left button up, pos=(840,339)
+21.0034 	DATA 	Keypress: return
+21.0093 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+21.0095 	DATA 	RatingScale unnamed RatingScale: rating RT=0.548
+21.0095 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.197), ('       3:\nmoderately', 0.548)]
+21.0183 	DATA 	Question Number: 8 , Response:        3:
+moderately
+21.2425 	DATA 	Mouse: Left button down, pos=(840,339)
+21.4588 	DATA 	Mouse:  Left button up, pos=(840,339)
+21.6535 	DATA 	Keypress: return
+21.6599 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+21.6601 	DATA 	RatingScale unnamed RatingScale: rating RT=0.598
+21.6601 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.181), ('       3:\nmoderately', 0.598)]
+21.6693 	DATA 	Question Number: 6 , Response:        3:
+moderately
+21.9199 	DATA 	Mouse: Left button down, pos=(840,339)
+22.0923 	DATA 	Mouse:  Left button up, pos=(840,339)
+22.2608 	DATA 	Keypress: return
+22.2610 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+22.2612 	DATA 	RatingScale unnamed RatingScale: rating RT=0.550
+22.2612 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.214), ('       3:\nmoderately', 0.55)]
+22.2689 	DATA 	Question Number: 2 , Response:        3:
+moderately
+22.5599 	DATA 	Mouse: Left button down, pos=(840,339)
+22.7533 	DATA 	Mouse:  Left button up, pos=(840,339)
+22.8874 	DATA 	Keypress: return
+22.8941 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+22.8944 	DATA 	RatingScale unnamed RatingScale: rating RT=0.582
+22.8944 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.263), ('       3:\nmoderately', 0.582)]
+22.9021 	DATA 	Question Number: 16 , Response:        3:
+moderately
+23.1859 	DATA 	Mouse: Left button down, pos=(840,339)
+23.3700 	DATA 	Mouse:  Left button up, pos=(840,339)
+23.5273 	DATA 	Keypress: return
+23.5276 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+23.5278 	DATA 	RatingScale unnamed RatingScale: rating RT=0.584
+23.5278 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.249), ('       3:\nmoderately', 0.584)]
+23.5355 	DATA 	Question Number: 4 , Response:        3:
+moderately
+23.8026 	DATA 	Mouse: Left button down, pos=(840,339)
+24.0031 	DATA 	Mouse:  Left button up, pos=(840,339)
+24.1599 	DATA 	Keypress: return
+24.1602 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+24.1604 	DATA 	RatingScale unnamed RatingScale: rating RT=0.583
+24.1604 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.231), ('       3:\nmoderately', 0.582)]
+24.1684 	DATA 	Question Number: 15 , Response:        3:
+moderately
+24.4026 	DATA 	Mouse: Left button down, pos=(840,339)
+24.5924 	DATA 	Mouse:  Left button up, pos=(840,339)
+24.7710 	DATA 	Keypress: return
+24.7775 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+24.7778 	DATA 	RatingScale unnamed RatingScale: rating RT=0.567
+24.7778 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.198), ('       3:\nmoderately', 0.566)]
+24.7858 	DATA 	Question Number: 18 , Response:        3:
+moderately
+24.9697 	DATA 	Mouse: Left button down, pos=(840,339)
+25.1695 	DATA 	Mouse:  Left button up, pos=(840,339)
+25.3933 	DATA 	Keypress: return
+25.3936 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+25.3939 	DATA 	RatingScale unnamed RatingScale: rating RT=0.566
+25.3939 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.148), ('       3:\nmoderately', 0.565)]
+25.4017 	DATA 	Question Number: 3 , Response:        3:
+moderately
+25.6026 	DATA 	Mouse: Left button down, pos=(840,339)
+25.8087 	DATA 	Mouse:  Left button up, pos=(840,339)
+26.0933 	DATA 	Keypress: return
+26.0936 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+26.0938 	DATA 	RatingScale unnamed RatingScale: rating RT=0.650
+26.0938 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.164), ('       3:\nmoderately', 0.649)]
+26.1014 	DATA 	Question Number: 14 , Response:        3:
+moderately
+26.2579 	DATA 	Mouse: Left button down, pos=(840,339)
+26.4527 	DATA 	Mouse:  Left button up, pos=(840,339)
+26.6866 	DATA 	Keypress: return
+26.6927 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+26.6929 	DATA 	RatingScale unnamed RatingScale: rating RT=0.550
+26.6929 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.115), ('       3:\nmoderately', 0.55)]
+26.7017 	DATA 	Question Number: 1 , Response:        3:
+moderately
+26.8581 	DATA 	Mouse: Left button down, pos=(840,339)
+27.0700 	DATA 	Mouse:  Left button up, pos=(840,339)
+27.2436 	DATA 	Keypress: return
+27.2439 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+27.2441 	DATA 	RatingScale unnamed RatingScale: rating RT=0.500
+27.2442 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.115), ('       3:\nmoderately', 0.5)]
+27.2520 	DATA 	Question Number: 12 , Response:        3:
+moderately
+27.4090 	DATA 	Mouse: Left button down, pos=(840,339)
+27.6265 	DATA 	Mouse:  Left button up, pos=(840,339)
+27.7379 	DATA 	Keypress: return
+27.7443 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+27.7445 	DATA 	RatingScale unnamed RatingScale: rating RT=0.451
+27.7445 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.116), ('       3:\nmoderately', 0.45)]
+27.7528 	DATA 	Question Number: 7 , Response:        3:
+moderately
+27.9592 	DATA 	Mouse: Left button down, pos=(840,339)
+28.1596 	DATA 	Mouse:  Left button up, pos=(840,339)
+28.2202 	DATA 	Keypress: return
+28.2267 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+28.2270 	DATA 	RatingScale unnamed RatingScale: rating RT=0.432
+28.2270 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.164), ('       3:\nmoderately', 0.431)]
+28.2360 	DATA 	Question Number: 5 , Response:        3:
+moderately
+28.4696 	DATA 	Mouse: Left button down, pos=(840,339)
+28.6781 	DATA 	Mouse:  Left button up, pos=(840,339)
+28.7204 	DATA 	Keypress: return
+28.7267 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+28.7269 	DATA 	RatingScale unnamed RatingScale: rating RT=0.447
+28.7269 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.196), ('       3:\nmoderately', 0.447)]
+28.7359 	DATA 	Question Number: 9 , Response:        3:
+moderately
+28.9692 	DATA 	Mouse: Left button down, pos=(840,339)
+29.1860 	DATA 	Mouse:  Left button up, pos=(840,339)
+29.1956 	DATA 	Keypress: return
+29.2290 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+29.2293 	DATA 	RatingScale unnamed RatingScale: rating RT=0.417
+29.2294 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.163), ('       3:\nmoderately', 0.416)]
+29.2526 	DATA 	Question Number: 17 , Response:        3:
+moderately
+29.4680 	DATA 	Mouse: Left button down, pos=(840,339)
+29.6841 	DATA 	Mouse:  Left button up, pos=(840,339)
+31.0073 	DATA 	Keypress: 2
+31.6040 	DATA 	Keypress: 3
+37.6078 	DATA 	Keypress: 2
+41.2798 	DATA 	Keypress: space
+2.0241 	DATA 	Displaying Round 1 label
+4.0411 	DATA 	Starting Round 1
+4.9892 	DATA 	Keypress: space
+5.1855 	DATA 	round 1 - trial 0 - throw: 1to3 - FBALL
+6.6273 	DATA 	Keypress: space
+7.8782 	DATA 	Keypress: space
+8.0742 	DATA 	round 1 - trial 1 - throw: 3to1 - FBALL
+11.0946 	DATA 	round 1 - trial 2 - throw: 1to2 - FBALL
+12.4400 	DATA 	PLAYER HAS BALL
+14.6573 	DATA 	Keypress: space
+15.8287 	DATA 	Keypress: 3
+15.8351 	DATA 	PLAYER THROWS TO 3 - RT 3.3950
+15.8351 	DATA 	round 1 - trial 3 - throw: 2to3 - FBALL
+18.3009 	DATA 	Keypress: 2
+18.4974 	DATA 	round 1 - trial 4 - throw: 3to1 - FBALL
+21.8523 	DATA 	round 1 - trial 5 - throw: 1to3 - FBALL
+24.3021 	DATA 	round 1 - trial 6 - throw: 3to1 - FBALL
+27.3202 	DATA 	round 1 - trial 7 - throw: 1to2 - FBALL
+28.7894 	DATA 	PLAYER HAS BALL
+28.7996 	DATA 	PLAYER THROWS TO 1 - RT 0.0102
+28.7997 	DATA 	round 1 - trial 8 - throw: 2to1 - FBALL
+31.1268 	DATA 	RETURN with 9 Trial Count and 27 Trial Clock
+35.9439 	DATA 	Keypress: 3
+36.1402 	DATA 	Displaying Round 2 label
+38.1560 	DATA 	Starting Round 2
+39.7720 	DATA 	Keypress: 2
+39.9683 	DATA 	round 2 - trial 0 - throw: 1to2 - FBALL
+40.5408 	DATA 	Keypress: 3
+41.3228 	DATA 	PLAYER HAS BALL
+41.3330 	DATA 	PLAYER THROWS TO 3 - RT 0.0102
+41.3330 	DATA 	round 2 - trial 1 - throw: 2to3 - FBALL
+44.3943 	DATA 	round 2 - trial 2 - throw: 3to1 - FBALL
+46.7248 	DATA 	Keypress: 2
+46.9212 	DATA 	round 2 - trial 3 - throw: 1to2 - FBALL
+48.0587 	DATA 	Keypress: 2
+48.3893 	DATA 	PLAYER HAS BALL
+48.3995 	DATA 	PLAYER THROWS TO 1 - RT 0.0102
+48.3995 	DATA 	round 2 - trial 4 - throw: 2to1 - FBALL
+51.4046 	DATA 	Keypress: 3
+51.6011 	DATA 	round 2 - trial 5 - throw: 1to3 - FBALL
+54.6966 	DATA 	round 2 - trial 6 - throw: 3to2 - FBALL
+56.0557 	DATA 	PLAYER HAS BALL
+56.0661 	DATA 	PLAYER THROWS TO 3 - RT 0.0103
+56.0661 	DATA 	round 2 - trial 7 - throw: 2to3 - FBALL
+58.2944 	DATA 	round 2 - trial 8 - throw: 3to1 - UBALL
+60.9778 	DATA 	round 2 - trial 9 - throw: 1to2 - UBALL
+62.4392 	DATA 	PLAYER HAS BALL
+67.9923 	DATA 	Keypress: 3
+71.0396 	DATA 	Keypress: 2
+200.7929 	DATA 	Keypress: escape
+200.7956 	DATA 	Keypress: escape
+200.7973 	DATA 	Keypress: escape
+200.7989 	DATA 	Keypress: escape
+200.8005 	DATA 	Keypress: escape
+200.8021 	DATA 	Keypress: escape
+200.8036 	DATA 	Keypress: escape
+200.8051 	DATA 	Keypress: escape
+200.8067 	DATA 	Keypress: escape
+200.8076 	DATA 	Mouse: Left button down, pos=(840,339)
+200.8081 	DATA 	Mouse:  Left button up, pos=(840,339)
+200.8088 	DATA 	Mouse: Left button down, pos=(881,500)
+200.8094 	DATA 	Mouse:  Left button up, pos=(881,500)
+200.8098 	DATA 	Mouse: Left button down, pos=(881,500)
+200.8103 	DATA 	Mouse:  Left button up, pos=(881,500)
+200.8108 	DATA 	Mouse: Left button down, pos=(1084,1050)
+200.8112 	DATA 	Mouse:  Left button up, pos=(1084,1050)
+200.8117 	DATA 	Mouse: Left button down, pos=(1084,1050)
+200.8121 	DATA 	Mouse:  Left button up, pos=(1084,1050)
+200.8125 	DATA 	Mouse: Left button down, pos=(1084,1050)
+200.8129 	DATA 	Mouse:  Left button up, pos=(1084,1050)
+200.8134 	DATA 	Mouse: Left button down, pos=(1084,1050)
+200.8138 	DATA 	Mouse:  Left button up, pos=(1084,1050)
+200.8149 	DATA 	Keypress: escape
+200.8164 	DATA 	Keypress: escape
+200.8179 	DATA 	Keypress: escape
+200.8193 	DATA 	Keypress: escape
+200.8207 	DATA 	Keypress: escape
+200.8220 	DATA 	Keypress: escape
+200.8231 	DATA 	Keypress: lctrl
+200.8237 	DATA 	Keypress: escape
+200.8246 	DATA 	Keypress: lshift
+200.8256 	DATA 	Keypress: escape
+200.8270 	DATA 	Keypress: escape
+200.8283 	DATA 	Keypress: escape
+200.8296 	DATA 	Keypress: escape
+200.8309 	DATA 	Keypress: escape
+200.8322 	DATA 	Keypress: escape
+200.8335 	DATA 	Keypress: escape
+200.8343 	DATA 	Keypress: lcommand
+200.8346 	DATA 	Keypress: lshift
+200.8510 	DATA 	Keypress: escape
+200.8520 	DATA 	Keypress: escape
+200.8528 	DATA 	Keypress: escape
+200.8536 	DATA 	Keypress: escape
+200.8544 	DATA 	Keypress: escape
+200.8552 	DATA 	Keypress: escape
+200.8620 	DATA 	Mouse: Left button down, pos=(1011,963)
+200.8625 	DATA 	Mouse:  Left button up, pos=(1011,963)
+200.8629 	DATA 	Mouse: Left button down, pos=(1011,963)
+200.8633 	DATA 	Mouse:  Left button up, pos=(1011,963)
+200.8637 	DATA 	Mouse: Left button down, pos=(1011,963)
+200.8641 	DATA 	Mouse:  Left button up, pos=(1011,963)
+200.8645 	DATA 	Mouse: Left button down, pos=(1011,963)
+200.8649 	DATA 	Mouse:  Left button up, pos=(1011,963)
+200.8653 	DATA 	Mouse: Left button down, pos=(1011,963)
+200.8656 	DATA 	Mouse:  Left button up, pos=(1011,963)
+200.8660 	DATA 	Mouse: Left button down, pos=(1011,963)
+200.8664 	DATA 	Mouse:  Left button up, pos=(1011,963)
+200.8675 	DATA 	Keypress: return
+200.8689 	DATA 	Keypress: return
+200.8703 	DATA 	Keypress: return
+200.8716 	DATA 	Keypress: return
+200.8730 	DATA 	Keypress: return
+201.1725 	DATA 	Keypress: lctrl
+201.1729 	DATA 	Keypress: lshift
+230.9988 	DATA 	Keypress: escape
+231.0001 	DATA 	Keypress: escape
+231.0012 	DATA 	Keypress: escape
+231.0023 	DATA 	Keypress: escape
+231.0033 	DATA 	Keypress: escape
+231.0042 	DATA 	Keypress: escape
+231.0051 	DATA 	Keypress: escape
+231.0061 	DATA 	Keypress: escape
+231.0070 	DATA 	Keypress: escape
+231.0151 	DATA 	Keypress: function
+231.0443 	DATA 	Keypress: f4
+231.0478 	DATA 	Keypress: escape
+231.0494 	DATA 	Keypress: escape
+231.0508 	DATA 	Keypress: escape
+231.0523 	DATA 	Keypress: escape
+231.0538 	DATA 	Keypress: escape
+231.0552 	DATA 	Keypress: escape
+231.0566 	DATA 	Keypress: escape
+231.0581 	DATA 	Keypress: escape
+231.0597 	DATA 	Keypress: escape
+231.0608 	DATA 	Mouse: Left button down, pos=(891,448)
+231.0613 	DATA 	Mouse:  Left button up, pos=(891,448)
+231.0616 	DATA 	Mouse: wheel shift=(0,0), pos=(862,516)
+231.0619 	DATA 	Mouse: wheel shift=(0,0), pos=(862,516)
+231.0624 	DATA 	Mouse: wheel shift=(0,0), pos=(901,384)
+231.0627 	DATA 	Mouse: wheel shift=(0,0), pos=(901,384)
+231.0632 	DATA 	Mouse: wheel shift=(5,22), pos=(901,384)
+231.0636 	DATA 	Mouse: wheel shift=(0,0), pos=(901,384)
+231.0645 	DATA 	Mouse: wheel shift=(1,0), pos=(901,384)
+231.0648 	DATA 	Mouse: wheel shift=(3,3), pos=(901,384)
+231.0650 	DATA 	Mouse: wheel shift=(0,0), pos=(901,384)
+231.0656 	DATA 	Keypress: lcommand
+231.0659 	DATA 	Keypress: lshift
+231.0666 	DATA 	Keypress: escape
+231.0675 	DATA 	Keypress: escape
+231.0688 	DATA 	Keypress: escape
+231.0697 	DATA 	Keypress: escape
+231.4133 	DATA 	Keypress: escape
+261.2376 	DATA 	Keypress: escape
+261.2393 	DATA 	Keypress: escape
+261.2406 	DATA 	Keypress: escape
+261.2419 	DATA 	Keypress: escape
+261.2431 	DATA 	Keypress: escape
+261.2445 	DATA 	Keypress: lctrl
+261.2448 	DATA 	Keypress: lshift
+261.2454 	DATA 	Keypress: escape
+261.2464 	DATA 	Keypress: escape
+261.2473 	DATA 	Keypress: escape
+261.2482 	DATA 	Keypress: escape
+261.2491 	DATA 	Keypress: escape
+261.2500 	DATA 	Keypress: escape
+261.2509 	DATA 	Keypress: escape
+291.4613 	DATA 	Keypress: escape
+291.4633 	DATA 	Keypress: escape
+291.4652 	DATA 	Keypress: escape
+291.4668 	DATA 	Keypress: escape
+291.4683 	DATA 	Keypress: escape
+291.4699 	DATA 	Keypress: escape
+321.6633 	DATA 	Mouse: wheel shift=(0,0), pos=(929,390)
+321.6636 	DATA 	Mouse: wheel shift=(0,0), pos=(929,390)
+321.6642 	DATA 	Mouse: wheel shift=(-2,10), pos=(929,390)
+321.6646 	DATA 	Mouse: wheel shift=(0,0), pos=(929,390)
+321.6654 	DATA 	Mouse: Left button down, pos=(929,390)
+321.6662 	DATA 	Mouse:  Left button up, pos=(929,390)
+321.6667 	DATA 	Mouse: Left button down, pos=(929,390)
+321.6673 	DATA 	Mouse:  Left button up, pos=(929,390)
+321.6686 	DATA 	Keypress: escape
+321.6702 	DATA 	Keypress: escape
+321.6716 	DATA 	Keypress: escape
+321.6731 	DATA 	Keypress: escape
+321.6745 	DATA 	Keypress: escape
+321.6759 	DATA 	Keypress: escape
+321.6773 	DATA 	Keypress: escape
+321.6787 	DATA 	Keypress: escape
+321.6801 	DATA 	Keypress: escape
+321.6815 	DATA 	Keypress: escape
+321.6828 	DATA 	Keypress: escape
+321.6841 	DATA 	Keypress: escape
+321.6855 	DATA 	Keypress: escape
+321.6867 	DATA 	Keypress: escape
+321.6880 	DATA 	Keypress: escape
+321.6893 	DATA 	Keypress: escape
+321.6906 	DATA 	Keypress: escape
+321.6915 	DATA 	Mouse: Left button down, pos=(1053,476)
+321.6919 	DATA 	Mouse:  Left button up, pos=(1053,476)
+321.6922 	DATA 	Mouse: Left button down, pos=(1053,476)
+321.6927 	DATA 	Mouse:  Left button up, pos=(1053,476)
+321.6931 	DATA 	Mouse: Left button down, pos=(1053,476)
+321.6935 	DATA 	Mouse:  Left button up, pos=(1053,476)
+321.6938 	DATA 	Mouse: wheel shift=(0,0), pos=(947,1050)
+321.6941 	DATA 	Mouse: wheel shift=(0,0), pos=(947,1050)
+321.6944 	DATA 	Mouse: wheel shift=(0,0), pos=(947,1050)
+321.6950 	DATA 	Mouse: wheel shift=(0,0), pos=(944,1046)
+321.6952 	DATA 	Mouse: wheel shift=(0,0), pos=(944,1046)
+321.6956 	DATA 	Mouse: Right button down, pos=(944,1046)
+321.6959 	DATA 	Mouse:  Right button up, pos=(944,1046)
+321.6965 	DATA 	Mouse: Left button down, pos=(939,1050)
+321.6969 	DATA 	Mouse:  Left button up, pos=(939,1050)
+321.6973 	DATA 	Mouse: Left button down, pos=(939,1050)
+321.6976 	DATA 	Mouse:  Left button up, pos=(939,1050)
+321.6986 	DATA 	Keypress: escape
+321.6999 	DATA 	Keypress: escape
+321.7011 	DATA 	Keypress: escape
+321.7017 	DATA 	Keypress: lcommand
+321.8065 	DATA 	Keypress: escape
+321.8074 	DATA 	Keypress: escape
+321.8145 	DATA 	Keypress: escape
+321.8153 	DATA 	Keypress: escape
+321.8161 	DATA 	Keypress: escape
+321.8169 	DATA 	Keypress: escape
+321.8177 	DATA 	Keypress: escape
+321.8185 	DATA 	Keypress: escape
+321.8194 	DATA 	Keypress: escape
+321.8202 	DATA 	Keypress: escape
+321.8278 	DATA 	Keypress: lctrl
+321.8281 	DATA 	Keypress: lshift
+321.8286 	DATA 	Keypress: escape
+321.8311 	DATA 	Keypress: space
+321.8315 	DATA 	Keypress: lcommand
+321.8324 	DATA 	Keypress: lcommand
+321.8327 	DATA 	Keypress: lctrl
+321.8333 	DATA 	Keypress: escape
+321.8342 	DATA 	Keypress: escape
+321.8350 	DATA 	Keypress: escape
+321.8359 	DATA 	Keypress: lshift
+321.8364 	DATA 	Keypress: escape
+321.8373 	DATA 	Keypress: escape
+321.8381 	DATA 	Keypress: escape
+351.8608 	DATA 	Keypress: return
+351.8627 	DATA 	Keypress: return
+351.8645 	DATA 	Keypress: return
+351.8663 	DATA 	Keypress: return
+351.8680 	DATA 	Keypress: return
+351.8695 	DATA 	Keypress: return
+351.8711 	DATA 	Keypress: return
+351.8726 	DATA 	Keypress: return
+351.8743 	DATA 	Keypress: return
+351.8760 	DATA 	Keypress: return
+351.8776 	DATA 	Keypress: return
+351.8792 	DATA 	Keypress: return
+351.8806 	DATA 	Keypress: return
+351.8821 	DATA 	Keypress: return
+351.8836 	DATA 	Keypress: return
+351.8851 	DATA 	Keypress: return
+351.8865 	DATA 	Keypress: return
+351.8879 	DATA 	Keypress: return
+351.8893 	DATA 	Keypress: return
+351.8907 	DATA 	Keypress: return
+351.8921 	DATA 	Keypress: return
+351.8935 	DATA 	Keypress: return
+351.8948 	DATA 	Keypress: return
+351.8978 	DATA 	Keypress: return
+351.8993 	DATA 	Keypress: lcommand
+351.8996 	DATA 	Keypress: lshift
+382.0703 	DATA 	Keypress: escape
+382.0722 	DATA 	Keypress: lcommand
+382.0734 	DATA 	Keypress: capslock
+382.0742 	DATA 	Keypress: escape
+382.0752 	DATA 	Keypress: escape
+382.0761 	DATA 	Keypress: escape
+382.0797 	DATA 	Keypress: lshift
+382.0800 	DATA 	Keypress: lctrl
+382.0806 	DATA 	Keypress: escape
+382.0815 	DATA 	Keypress: escape
+382.0828 	DATA 	Keypress: escape
+382.0837 	DATA 	Keypress: escape
+382.0846 	DATA 	Keypress: escape
+472.7209 	DATA 	Keypress: lctrl
+472.7224 	DATA 	Keypress: lshift
+472.7233 	DATA 	Keypress: escape
+472.7250 	DATA 	Keypress: lshift
+472.7255 	DATA 	Keypress: lcommand
+472.7262 	DATA 	Keypress: escape
+472.7276 	DATA 	Keypress: rcommand
+472.7280 	DATA 	Keypress: rshift
+472.7286 	DATA 	Keypress: escape
+472.7297 	DATA 	Keypress: escape
+472.7308 	DATA 	Keypress: escape
+472.7321 	DATA 	Keypress: lctrl
+472.7324 	DATA 	Keypress: rshift
+472.7330 	DATA 	Keypress: escape
+472.7339 	DATA 	Keypress: escape
+472.7348 	DATA 	Keypress: escape
+472.7358 	DATA 	Keypress: escape
+472.7367 	DATA 	Keypress: escape
+472.7380 	DATA 	Keypress: lcommand
+472.7383 	DATA 	Keypress: rshift
+472.7390 	DATA 	Keypress: escape
+472.7400 	DATA 	Keypress: escape
+472.7410 	DATA 	Keypress: escape
+472.7420 	DATA 	Keypress: escape
+472.7430 	DATA 	Keypress: escape
+472.7440 	DATA 	Keypress: escape
+472.7450 	DATA 	Keypress: escape
+472.9193 	ERROR 	Couldn't find image showpics/60.png; check path? (tried: /Users/mchiovaro/Documents/github/stimulus/showpics/60.png)

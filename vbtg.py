@@ -145,7 +145,7 @@ q20="I feel afraid"
 qlibrary = {1:q1, 2:q2, 3:q3, 4:q4, 5:q5, 6:q6, 7:q7, 8:q8, 9:q9, 10:q10, 11:q11, 12:q12, 13:q13, 14:q14, 15:q15, 16:q16, 17:q17, 18:q18, 19:q19, 20:q20} 
 questions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] #list of qs
 
-piktures = 60 #numbers of pictures in folder
+piktures = 58 #numbers of pictures in folder
 pix = list(range(0, piktures))
 shuffle(pix)
 
