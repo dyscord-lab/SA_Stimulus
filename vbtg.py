@@ -86,7 +86,7 @@ for p in paths:
 ################
 
 useFullScreen=True #Set to true for full screen
-win = visual.Window([1100,800], monitor="testMonitor", units="deg", fullscr=useFullScreen, allowGUI=False, color="#FFFFFF")
+win = visual.Window([1680,1050], monitor="testMonitor", units="deg", fullscr=useFullScreen, allowGUI=False, color="#FFFFFF")
 
 ################
 # Set up stimuli #
@@ -181,7 +181,7 @@ def show_images():
     core.wait(9)
     event.clearEvents()
     for k in pix:
-        pic = visual.ImageStim(win, image='showpics/%i.jpg' % (k+1))
+        pic = visual.ImageStim(win, image='showpics/%i.png' % (k+1))
         print(k+1)
         pic.draw()
         win.flip()

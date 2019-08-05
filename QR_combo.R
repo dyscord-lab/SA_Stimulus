@@ -65,8 +65,8 @@ for (i in 1:58) {
                    rasterGrob(readPNG(RDname)), rasterGrob(blank), rasterGrob(readPNG(LDname)), 
                    ncol=3, widths = c(.5,5,.5), heights = c(.5,2,.5))
   setwd("../")
-  mypath <- "../images/"
-  ggsave(file = paste0(mypath, "image_", i, ".png"), g) # "image_i.png" to have unique file names
+  mypath <- "../showpics/"
+  ggsave(file = paste0(mypath, i, ".png"), g) # "image_i.png" to have unique file names
   #dev.off()
   setwd("./stimuli/")
   
