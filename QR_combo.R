@@ -41,30 +41,35 @@ install.packages(c("png", "jpeg", "grid", "gridExtra", "ggplot2"))
 Packages <- c("png", "jpeg", "grid", "gridExtra", "ggplot2")
 lapply(Packages, library, character.only = TRUE)
 
-# Will finish loop once image layout is given the OK! :)
-#for (i in 1:58){
-# }
-
-# identifying NAMES of unique QR markers (here will be [i, 1], [i, 2],... in the loop)
-RUname <- stimuli[1, 2]
-LUname  <- stimuli[1, 3]
-RDname <- stimuli[1, 4]
-LDname <- stimuli[1, 5]
-
 # reading in blank image
 blank <- readPNG('../blank.png')
 
-#reading in stimuli image
-imagename <- stimuli[1, 1] # also will be stimuli[i,1] in the loop
 setwd("../stimuli")
-image <- readJPEG(imagename)
+# loop for image generation
+for (i in 1:58) {
+  
+  # identifying NAMES of unique QR markers
+  RUname <- stimuli[i, 2]
+  LUname  <- stimuli[i, 3]
+  RDname <- stimuli[i, 4]
+  LDname <- stimuli[i, 5]
+  
+  #reading in stimuli image
+  imagename <- stimuli[i, 1] # also will be stimuli[i,1] in the loop
+  image <- readJPEG(imagename)
+  
+  # creating grid image, READING the QR PNG images at the same time
+  setwd("../QR_codes")
+  g <- arrangeGrob(rasterGrob(readPNG(RUname)), rasterGrob(blank), rasterGrob(readPNG(LUname)), 
+                   rasterGrob(blank), rasterGrob(image), rasterGrob(blank), 
+                   rasterGrob(readPNG(RDname)), rasterGrob(blank), rasterGrob(readPNG(LDname)), 
+                   ncol=3, widths = c(.5,5,.5), heights = c(.5,2,.5))
+  setwd("../")
+  mypath <- "../images/"
+  ggsave(file = paste0(mypath, "image_", i, ".png"), g) # "image_i.png" to have unique file names
+  #dev.off()
+  setwd("./stimuli/")
+  
+}
 
-# creating grid image, READING the QR PNG images at the same time
-setwd("../QR_codes")
-g <- arrangeGrob(rasterGrob(readPNG(RUname)), rasterGrob(blank), rasterGrob(readPNG(LUname)), 
-                 rasterGrob(blank), rasterGrob(image), rasterGrob(blank), 
-                 rasterGrob(readPNG(RDname)), rasterGrob(blank), rasterGrob(readPNG(LDname)), 
-                 ncol=3, widths = c(.5,5,.5), heights = c(.5,2,.5))
-mypath <- "../final_images/"
-ggsave(file = paste0(mypath, "image_", ".png"), g) # will have "image_", i, ".png" here to have unique file names
-dev.off()
+
