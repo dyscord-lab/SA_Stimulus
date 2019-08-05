@@ -3,9 +3,8 @@ This repo contains the stimuli for the social anxiety study.
 
 Important instructions for use:
 1. Unzip all folders
-2. Move contents of folder "showpicsCONV" to the unzipped folder "showpics"
-3. Create folder named "logs"
-4. Create folder names "__pycache__"
+2. Create folder named "logs"
+3. Create folder named "__pycache__"
 
 File descriptions:
 1. images.zip - images for CyberBall characters while tossing
