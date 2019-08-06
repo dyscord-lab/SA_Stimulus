@@ -185,7 +185,7 @@ def show_images():
     for k in pix:    # need to resize images HERE
         pic = visual.ImageStim(win, image='showpics/%i.png' % (k+1))
         print(k+1)
-        pic.size*=(0.5, 0.5)
+        pic.size*=(0.8, 0.8)
         pic.draw()
         pic.draw()
         win.flip()
