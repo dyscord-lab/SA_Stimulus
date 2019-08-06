@@ -1,0 +1,427 @@
+8.3522 	DATA 	START
+8.3522 	DATA 	Intro Survey
+9.5367 	DATA 	Keypress: space
+11.7439 	DATA 	Mouse: Left button down, pos=(861,396)
+11.8960 	DATA 	Mouse:  Left button up, pos=(861,396)
+12.7989 	DATA 	Mouse: Left button down, pos=(841,340)
+12.9330 	DATA 	Mouse:  Left button up, pos=(841,340)
+13.1113 	DATA 	Keypress: return
+13.1175 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+13.1179 	DATA 	RatingScale unnamed RatingScale: rating RT=3.509
+13.1179 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 3.191), ('       3:\nmoderately', 3.509)]
+13.1266 	DATA 	Question Number: 10 , Response:        3:
+moderately
+13.3335 	DATA 	Mouse: Left button down, pos=(841,340)
+13.5169 	DATA 	Mouse:  Left button up, pos=(841,340)
+13.5609 	DATA 	Keypress: return
+13.8171 	DATA 	Mouse: Left button down, pos=(841,340)
+14.0604 	DATA 	Mouse:  Left button up, pos=(841,340)
+14.2271 	DATA 	Keypress: return
+14.2355 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+14.2359 	DATA 	RatingScale unnamed RatingScale: rating RT=1.062
+14.2359 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.16), ('       3:\nmoderately', 1.062)]
+14.2629 	DATA 	Question Number: 8 , Response:        3:
+moderately
+14.5941 	DATA 	Mouse: Left button down, pos=(841,340)
+14.7939 	DATA 	Mouse:  Left button up, pos=(841,340)
+14.8842 	DATA 	Keypress: return
+14.8845 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+14.8847 	DATA 	RatingScale unnamed RatingScale: rating RT=0.579
+14.8847 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.295), ('       3:\nmoderately', 0.579)]
+14.8927 	DATA 	Question Number: 6 , Response:        3:
+moderately
+15.2600 	DATA 	Mouse: Left button down, pos=(841,340)
+15.4278 	DATA 	Mouse:  Left button up, pos=(841,340)
+15.5853 	DATA 	Keypress: return
+15.5856 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+15.5859 	DATA 	RatingScale unnamed RatingScale: rating RT=0.648
+15.5859 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.328), ('       3:\nmoderately', 0.647)]
+15.6126 	DATA 	Question Number: 11 , Response:        3:
+moderately
+15.8777 	DATA 	Mouse: Left button down, pos=(841,340)
+16.0669 	DATA 	Mouse:  Left button up, pos=(841,340)
+16.2181 	DATA 	Keypress: return
+16.2183 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+16.2185 	DATA 	RatingScale unnamed RatingScale: rating RT=0.563
+16.2185 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.229), ('       3:\nmoderately', 0.562)]
+16.2267 	DATA 	Question Number: 1 , Response:        3:
+moderately
+16.4997 	DATA 	Mouse: Left button down, pos=(841,340)
+16.6665 	DATA 	Mouse:  Left button up, pos=(841,340)
+16.8455 	DATA 	Keypress: return
+16.8525 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+16.8528 	DATA 	RatingScale unnamed RatingScale: rating RT=0.582
+16.8528 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.23), ('       3:\nmoderately', 0.582)]
+16.8769 	DATA 	Question Number: 16 , Response:        3:
+moderately
+17.0832 	DATA 	Mouse: Left button down, pos=(841,340)
+17.2438 	DATA 	Mouse:  Left button up, pos=(841,340)
+17.4188 	DATA 	Keypress: return
+17.4191 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+17.4193 	DATA 	RatingScale unnamed RatingScale: rating RT=0.499
+17.4193 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.164), ('       3:\nmoderately', 0.499)]
+17.4469 	DATA 	Question Number: 14 , Response:        3:
+moderately
+17.7333 	DATA 	Mouse: Left button down, pos=(841,340)
+17.8997 	DATA 	Mouse:  Left button up, pos=(841,340)
+18.0511 	DATA 	Keypress: return
+18.0513 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+18.0515 	DATA 	RatingScale unnamed RatingScale: rating RT=0.562
+18.0516 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.244), ('       3:\nmoderately', 0.561)]
+18.0593 	DATA 	Question Number: 12 , Response:        3:
+moderately
+18.2777 	DATA 	Mouse: Left button down, pos=(841,340)
+18.4340 	DATA 	Mouse:  Left button up, pos=(841,340)
+18.6015 	DATA 	Keypress: return
+18.6017 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+18.6019 	DATA 	RatingScale unnamed RatingScale: rating RT=0.501
+18.6020 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.183), ('       3:\nmoderately', 0.501)]
+18.6101 	DATA 	Question Number: 9 , Response:        3:
+moderately
+18.8654 	DATA 	Mouse: Left button down, pos=(841,340)
+19.0945 	DATA 	Mouse:  Left button up, pos=(841,340)
+19.1955 	DATA 	Keypress: return
+19.2019 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+19.2022 	DATA 	RatingScale unnamed RatingScale: rating RT=0.550
+19.2022 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.213), ('       3:\nmoderately', 0.549)]
+19.2299 	DATA 	Question Number: 3 , Response:        3:
+moderately
+19.4776 	DATA 	Mouse: Left button down, pos=(841,340)
+19.6661 	DATA 	Mouse:  Left button up, pos=(841,340)
+19.7125 	DATA 	Keypress: return
+19.7187 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+19.7189 	DATA 	RatingScale unnamed RatingScale: rating RT=0.446
+19.7189 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.211), ('       3:\nmoderately', 0.446)]
+19.7459 	DATA 	Question Number: 19 , Response:        3:
+moderately
+20.0163 	DATA 	Mouse: Left button down, pos=(841,340)
+20.3092 	DATA 	Keypress: return
+20.3101 	DATA 	Mouse:  Left button up, pos=(841,340)
+20.3105 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+20.3109 	DATA 	RatingScale unnamed RatingScale: rating RT=0.522
+20.3109 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.228), ('       3:\nmoderately', 0.521)]
+20.3296 	DATA 	Question Number: 13 , Response:        3:
+moderately
+20.6276 	DATA 	Mouse: Left button down, pos=(841,340)
+20.8834 	DATA 	Mouse:  Left button up, pos=(841,340)
+21.0515 	DATA 	Keypress: return
+21.0517 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+21.0520 	DATA 	RatingScale unnamed RatingScale: rating RT=0.680
+21.0520 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.261), ('       3:\nmoderately', 0.679)]
+21.0602 	DATA 	Question Number: 5 , Response:        3:
+moderately
+21.2937 	DATA 	Mouse: Left button down, pos=(841,340)
+21.5167 	DATA 	Mouse:  Left button up, pos=(841,340)
+21.5845 	DATA 	Keypress: return
+21.5848 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+21.5850 	DATA 	RatingScale unnamed RatingScale: rating RT=0.481
+21.5850 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.196), ('       3:\nmoderately', 0.481)]
+21.5933 	DATA 	Question Number: 18 , Response:        3:
+moderately
+21.8435 	DATA 	Mouse: Left button down, pos=(841,340)
+22.1273 	DATA 	Mouse:  Left button up, pos=(841,340)
+22.1454 	DATA 	Keypress: return
+22.1517 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+22.1520 	DATA 	RatingScale unnamed RatingScale: rating RT=0.516
+22.1520 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.214), ('       3:\nmoderately', 0.516)]
+22.1602 	DATA 	Question Number: 17 , Response:        3:
+moderately
+22.4439 	DATA 	Mouse: Left button down, pos=(841,340)
+22.6988 	DATA 	Mouse:  Left button up, pos=(841,340)
+22.7616 	DATA 	Keypress: return
+22.7681 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+22.7683 	DATA 	RatingScale unnamed RatingScale: rating RT=0.565
+22.7684 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.247), ('       3:\nmoderately', 0.565)]
+22.7766 	DATA 	Question Number: 20 , Response:        3:
+moderately
+23.0163 	DATA 	Mouse: Left button down, pos=(841,340)
+23.2437 	DATA 	Mouse:  Left button up, pos=(841,340)
+23.2954 	DATA 	Keypress: return
+23.3019 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+23.3021 	DATA 	RatingScale unnamed RatingScale: rating RT=0.482
+23.3021 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.196), ('       3:\nmoderately', 0.481)]
+23.3296 	DATA 	Question Number: 2 , Response:        3:
+moderately
+23.5603 	DATA 	Mouse: Left button down, pos=(841,340)
+23.8171 	DATA 	Mouse:  Left button up, pos=(841,340)
+23.8843 	DATA 	Keypress: return
+23.8846 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+23.8848 	DATA 	RatingScale unnamed RatingScale: rating RT=0.513
+23.8848 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.196), ('       3:\nmoderately', 0.513)]
+23.8929 	DATA 	Question Number: 15 , Response:        3:
+moderately
+24.1667 	DATA 	Mouse: Left button down, pos=(841,340)
+24.4271 	DATA 	Mouse:  Left button up, pos=(841,340)
+24.4612 	DATA 	Keypress: return
+24.4678 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+24.4680 	DATA 	RatingScale unnamed RatingScale: rating RT=0.533
+24.4680 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.232), ('       3:\nmoderately', 0.533)]
+24.4761 	DATA 	Question Number: 7 , Response:        3:
+moderately
+24.7103 	DATA 	Mouse: Left button down, pos=(841,340)
+24.9362 	DATA 	Keypress: return
+24.9366 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+24.9369 	DATA 	RatingScale unnamed RatingScale: rating RT=0.419
+24.9369 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.198), ('       3:\nmoderately', 0.418)]
+24.9632 	DATA 	Question Number: 4 , Response:        3:
+moderately
+25.0401 	DATA 	Mouse:  Left button up, pos=(841,340)
+25.2192 	DATA 	Mouse: Left button down, pos=(841,340)
+25.4424 	DATA 	Mouse:  Left button up, pos=(841,340)
+26.2254 	DATA 	Keypress: 2
+26.5489 	DATA 	Keypress: 3
+35.2711 	DATA 	Keypress: space
+36.1094 	DATA 	Keypress: space
+2.0193 	DATA 	Displaying Round 1 label
+4.0360 	DATA 	Starting Round 1
+5.1894 	DATA 	round 1 - trial 0 - throw: 1to3 - FBALL
+7.3180 	DATA 	round 1 - trial 1 - throw: 3to2 - FBALL
+8.6681 	DATA 	PLAYER HAS BALL
+9.7178 	DATA 	Keypress: space
+10.2252 	DATA 	Keypress: 2
+10.2297 	DATA 	PLAYER THROWS TO 1 - RT 1.5615
+10.2297 	DATA 	round 1 - trial 2 - throw: 2to1 - FBALL
+12.9557 	DATA 	round 1 - trial 3 - throw: 1to2 - FBALL
+14.3185 	DATA 	PLAYER HAS BALL
+14.7536 	DATA 	Keypress: 2
+14.7573 	DATA 	PLAYER THROWS TO 1 - RT 0.4388
+14.7573 	DATA 	round 1 - trial 4 - throw: 2to1 - FBALL
+17.5865 	DATA 	round 1 - trial 5 - throw: 1to3 - FBALL
+21.1466 	DATA 	round 1 - trial 6 - throw: 3to1 - FBALL
+24.3814 	DATA 	round 1 - trial 7 - throw: 1to3 - FBALL
+26.9719 	DATA 	round 1 - trial 8 - throw: 3to1 - FBALL
+29.9179 	DATA 	RETURN with 9 Trial Count and 25 Trial Clock
+34.9343 	DATA 	Displaying Round 2 label
+36.9519 	DATA 	Starting Round 2
+37.9120 	DATA 	round 2 - trial 0 - throw: 1to3 - FBALL
+40.3454 	DATA 	round 2 - trial 1 - throw: 3to2 - FBALL
+41.7008 	DATA 	PLAYER HAS BALL
+41.7722 	DATA 	Keypress: 2
+41.7728 	DATA 	PLAYER THROWS TO 1 - RT 0.0720
+41.7728 	DATA 	round 2 - trial 2 - throw: 2to1 - FBALL
+43.5517 	DATA 	round 2 - trial 3 - throw: 1to2 - FBALL
+44.9175 	DATA 	PLAYER HAS BALL
+46.8560 	DATA 	Keypress: 2
+46.8567 	DATA 	PLAYER THROWS TO 1 - RT 1.9391
+46.8567 	DATA 	round 2 - trial 4 - throw: 2to1 - FBALL
+49.3538 	DATA 	round 2 - trial 5 - throw: 1to3 - FBALL
+52.7721 	DATA 	Keypress: 2
+52.9685 	DATA 	round 2 - trial 6 - throw: 3to1 - FBALL
+56.2955 	DATA 	round 2 - trial 7 - throw: 1to3 - FBALL
+58.9942 	DATA 	round 2 - trial 8 - throw: 3to1 - UBALL
+62.4268 	DATA 	RETURN with 9 Trial Count and 25 Trial Clock
+68.7142 	DATA 	Keypress: space
+69.6189 	DATA 	Keypress: 2
+81.3548 	DATA 	Mouse: wheel shift=(0,0), pos=(839,404)
+82.1800 	DATA 	Mouse: wheel shift=(0,0), pos=(839,404)
+82.1813 	DATA 	Mouse: Left button down, pos=(845,404)
+83.4188 	DATA 	Mouse:  Left button up, pos=(845,404)
+151.7126 	DATA 	Keypress: space
+154.2129 	DATA 	Mouse: Left button down, pos=(838,360)
+154.3971 	DATA 	Mouse:  Left button up, pos=(838,360)
+155.8477 	DATA 	Mouse: Left button down, pos=(836,323)
+155.9637 	DATA 	Mouse:  Left button up, pos=(836,323)
+156.5208 	DATA 	Keypress: return
+156.5210 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+156.5213 	DATA 	RatingScale unnamed RatingScale: rating RT=4.765
+156.5213 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 4.097), ('       3:\nmoderately', 4.764)]
+156.5297 	DATA 	Question Number: 8 , Response:        3:
+moderately
+157.3635 	DATA 	Mouse: Left button down, pos=(836,323)
+157.5304 	DATA 	Mouse:  Left button up, pos=(836,323)
+157.6320 	DATA 	Keypress: return
+157.6385 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+157.6387 	DATA 	RatingScale unnamed RatingScale: rating RT=1.066
+157.6387 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.797), ('       3:\nmoderately', 1.066)]
+157.6658 	DATA 	Question Number: 14 , Response:        3:
+moderately
+157.9128 	DATA 	Mouse: Left button down, pos=(836,323)
+158.1200 	DATA 	Mouse:  Left button up, pos=(836,323)
+158.2209 	DATA 	Keypress: return
+158.2212 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+158.2214 	DATA 	RatingScale unnamed RatingScale: rating RT=0.512
+158.2214 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.211), ('       3:\nmoderately', 0.512)]
+158.2492 	DATA 	Question Number: 18 , Response:        3:
+moderately
+158.4683 	DATA 	Mouse: Left button down, pos=(836,323)
+158.6526 	DATA 	Mouse:  Left button up, pos=(836,323)
+158.7872 	DATA 	Keypress: return
+158.7874 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+158.7877 	DATA 	RatingScale unnamed RatingScale: rating RT=0.496
+158.7877 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.177), ('       3:\nmoderately', 0.495)]
+158.7962 	DATA 	Question Number: 12 , Response:        3:
+moderately
+159.0198 	DATA 	Mouse: Left button down, pos=(836,323)
+159.2462 	DATA 	Mouse:  Left button up, pos=(836,323)
+159.3478 	DATA 	Keypress: return
+159.3546 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+159.3549 	DATA 	RatingScale unnamed RatingScale: rating RT=0.514
+159.3549 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.18), ('       3:\nmoderately', 0.514)]
+159.3789 	DATA 	Question Number: 5 , Response:        3:
+moderately
+159.5526 	DATA 	Mouse: Left button down, pos=(836,323)
+159.7629 	DATA 	Mouse:  Left button up, pos=(836,323)
+159.8868 	DATA 	Keypress: return
+159.8871 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+159.8873 	DATA 	RatingScale unnamed RatingScale: rating RT=0.465
+159.8873 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.131), ('       3:\nmoderately', 0.465)]
+159.8957 	DATA 	Question Number: 15 , Response:        3:
+moderately
+160.0858 	DATA 	Mouse: Left button down, pos=(836,323)
+160.2955 	DATA 	Mouse:  Left button up, pos=(836,323)
+160.3534 	DATA 	Keypress: return
+160.3537 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+160.3540 	DATA 	RatingScale unnamed RatingScale: rating RT=0.416
+160.3540 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.148), ('       3:\nmoderately', 0.415)]
+160.3622 	DATA 	Question Number: 17 , Response:        3:
+moderately
+160.6136 	DATA 	Mouse: Left button down, pos=(836,323)
+160.8358 	DATA 	Mouse:  Left button up, pos=(836,323)
+160.8375 	DATA 	Keypress: return
+160.8524 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+160.8527 	DATA 	RatingScale unnamed RatingScale: rating RT=0.449
+160.8527 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.218), ('       3:\nmoderately', 0.448)]
+160.8626 	DATA 	Question Number: 20 , Response:        3:
+moderately
+161.1192 	DATA 	Mouse: Left button down, pos=(836,323)
+161.3468 	DATA 	Mouse:  Left button up, pos=(836,323)
+161.3488 	DATA 	Keypress: return
+161.3549 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+161.3551 	DATA 	RatingScale unnamed RatingScale: rating RT=0.449
+161.3552 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.214), ('       3:\nmoderately', 0.449)]
+161.3828 	DATA 	Question Number: 7 , Response:        3:
+moderately
+161.6191 	DATA 	Mouse: Left button down, pos=(836,323)
+161.8138 	DATA 	Keypress: return
+161.8354 	DATA 	Mouse:  Left button up, pos=(836,323)
+162.1369 	DATA 	Mouse: Left button down, pos=(836,323)
+162.4289 	DATA 	Mouse:  Left button up, pos=(836,323)
+162.5231 	DATA 	Keypress: return
+162.5234 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+162.5237 	DATA 	RatingScale unnamed RatingScale: rating RT=1.097
+162.5238 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.193), ('       3:\nmoderately', 1.097)]
+162.5493 	DATA 	Question Number: 9 , Response:        3:
+moderately
+162.9346 	DATA 	Mouse: Left button down, pos=(836,323)
+163.1635 	DATA 	Mouse:  Left button up, pos=(836,323)
+163.3372 	DATA 	Keypress: return
+163.3375 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+163.3378 	DATA 	RatingScale unnamed RatingScale: rating RT=0.746
+163.3378 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.343), ('       3:\nmoderately', 0.745)]
+163.3628 	DATA 	Question Number: 1 , Response:        3:
+moderately
+163.7013 	DATA 	Mouse: Left button down, pos=(836,323)
+163.9540 	DATA 	Mouse:  Left button up, pos=(836,323)
+164.1040 	DATA 	Keypress: return
+164.1043 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+164.1045 	DATA 	RatingScale unnamed RatingScale: rating RT=0.699
+164.1046 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.296), ('       3:\nmoderately', 0.699)]
+164.1325 	DATA 	Question Number: 10 , Response:        3:
+moderately
+164.5301 	DATA 	Mouse: Left button down, pos=(836,323)
+164.7535 	DATA 	Mouse:  Left button up, pos=(836,323)
+164.8708 	DATA 	Keypress: return
+164.8711 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+164.8714 	DATA 	RatingScale unnamed RatingScale: rating RT=0.696
+164.8714 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.361), ('       3:\nmoderately', 0.696)]
+164.8993 	DATA 	Question Number: 19 , Response:        3:
+moderately
+165.2693 	DATA 	Mouse: Left button down, pos=(836,323)
+165.4639 	DATA 	Mouse:  Left button up, pos=(836,323)
+165.7475 	DATA 	Keypress: return
+165.7540 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+165.7542 	DATA 	RatingScale unnamed RatingScale: rating RT=0.811
+165.7543 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.327), ('       3:\nmoderately', 0.811)]
+165.7628 	DATA 	Question Number: 11 , Response:        3:
+moderately
+166.1964 	DATA 	Mouse: Left button down, pos=(836,323)
+166.4191 	DATA 	Mouse:  Left button up, pos=(836,323)
+166.5709 	DATA 	Keypress: return
+166.5712 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+166.5715 	DATA 	RatingScale unnamed RatingScale: rating RT=0.766
+166.5715 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.397), ('       3:\nmoderately', 0.766)]
+166.5993 	DATA 	Question Number: 4 , Response:        3:
+moderately
+167.0862 	DATA 	Mouse: Left button down, pos=(836,323)
+167.2794 	DATA 	Mouse:  Left button up, pos=(836,323)
+167.4049 	DATA 	Keypress: return
+167.4052 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+167.4054 	DATA 	RatingScale unnamed RatingScale: rating RT=0.763
+167.4055 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.444), ('       3:\nmoderately', 0.763)]
+167.4322 	DATA 	Question Number: 6 , Response:        3:
+moderately
+167.7619 	DATA 	Mouse: Left button down, pos=(836,323)
+167.9466 	DATA 	Mouse:  Left button up, pos=(836,323)
+168.0982 	DATA 	Keypress: return
+168.1043 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+168.1045 	DATA 	RatingScale unnamed RatingScale: rating RT=0.629
+168.1046 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.291), ('       3:\nmoderately', 0.629)]
+168.1328 	DATA 	Question Number: 3 , Response:        3:
+moderately
+168.3301 	DATA 	Mouse: Left button down, pos=(836,323)
+168.5531 	DATA 	Mouse:  Left button up, pos=(836,323)
+168.6296 	DATA 	Keypress: return
+168.6359 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+168.6361 	DATA 	RatingScale unnamed RatingScale: rating RT=0.460
+168.6361 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.162), ('       3:\nmoderately', 0.46)]
+168.6456 	DATA 	Question Number: 13 , Response:        3:
+moderately
+168.9127 	DATA 	Mouse: Left button down, pos=(836,323)
+169.1818 	DATA 	Keypress: return
+169.1886 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+169.1889 	DATA 	RatingScale unnamed RatingScale: rating RT=0.501
+169.1889 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.231), ('       3:\nmoderately', 0.501)]
+169.2165 	DATA 	Mouse:  Left button up, pos=(836,323)
+169.2169 	DATA 	Question Number: 16 , Response:        3:
+moderately
+169.4473 	DATA 	Mouse: Left button down, pos=(836,323)
+169.6973 	DATA 	Keypress: return
+169.7033 	DATA 	RatingScale unnamed RatingScale: (key response) rating=       3:
+moderately
+169.7036 	DATA 	RatingScale unnamed RatingScale: rating RT=0.444
+169.7036 	DATA 	RatingScale unnamed RatingScale: history=[(None, 0.0), ('       3:\nmoderately', 0.194), ('       3:\nmoderately', 0.443)]
+169.7119 	DATA 	Question Number: 2 , Response:        3:
+moderately
+169.7358 	DATA 	Mouse:  Left button up, pos=(836,323)
+177.0488 	DATA 	Mouse: Left button down, pos=(836,323)
+177.0498 	DATA 	Mouse:  Left button up, pos=(836,323)
+177.2464 	DATA 	END

@@ -46,7 +46,7 @@ blank <- readPNG('../blank.png')
 
 setwd("../stimuli")
 # loop for image generation
-for (i in 1:1) {
+for (i in 1:58) {
   
   # identifying NAMES of unique QR markers
   RUname <- stimuli[i, 2]

@@ -32,6 +32,7 @@ trialCnt=0
 rndCnt=0
 condition="FBALL"
 
+# these instructions aren't displayed anywhere when run??
 instructions1 = '''
 In the upcoming task, we will test the effects of practicing mental visualization on task performance. Thus, we need you to practice your mental visualization skills. We have found that the best way to do this is to have you play an on-line ball tossing game with other participants who are logged on to the system at the same time.
 
@@ -101,10 +102,10 @@ instr_p3 = visual.TextStim(win, text="",color="#000000", pos=(-6, -3), height=0.
 p1_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,3.15), alignHoriz="left")
 p3_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,-2.85), alignHoriz="left")
 
-instr1 = visual.TextStim(win, text="Welcome to the experiment. We'll change this text to something. Instructional bullshit. Press any key to continue." , color="#000000")
+instr1 = visual.TextStim(win, text="Welcome to the experiment. First, you are going to play and interactive ball tossing game. Press any key to continue." , color="#000000")
 instr2= visual.TextStim(win, text="Look at some pictures. intructions instructions" , color="#000000")
 instr3= visual.TextStim(win, text="final bullshit. press any key to continue" , color="#000000")
-imagestart= visual.TextStim(win, text="starting random image display" , color="#000000")
+imagestart= visual.TextStim(win, text="You will now view a series of images. Try to visualize yourself actually being in each scene." , color="#000000")
 
 players = visual.SimpleImageStim(win, image='images/start.bmp')
 
@@ -147,7 +148,7 @@ questions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 
 
 piktures = 58 #numbers of pictures in folder
 pix = list(range(0, piktures))
-shuffle(pix)
+shuffle(pix) #randomized order of pictures
 
 def survey_intro():
     shuffle(questions) #randomize order of questions
@@ -169,6 +170,7 @@ def survey_intro():
         response = myRatingScale.getRating()
         logging.log(level=logging.DATA, msg="Question Number: %i , Response: %s" % (i, response))
 
+# show the stimulus images
 def show_images():
     event.clearEvents()
     instr2.draw()
@@ -184,6 +186,7 @@ def show_images():
         pic = visual.ImageStim(win, image='showpics/%i.png' % (k+1))
         print(k+1)
         pic.size*=(0.5, 0.5)
+        pic.draw()
         pic.draw()
         win.flip()
         core.wait(1) #set how long images stay
@@ -282,21 +285,36 @@ def throw_ball(fromP, toP): #log the throw and add counters to roundcount and tr
     
     logging.log(level=logging.DATA, msg="round %i - trial %i - throw: %s - %s" % (round, trialCnt, key, condition))
     
-    for s in throw[key]:
+    logging.log(level=logging.DATA, msg="throw variable: %s" % (throw))
+    logging.log(level=logging.DATA, msg="key variable: %s" % (key))
+    
+    sorted_images = []
+    for next_image in throw[key]:
+        sorted_images.append(next_image)
+    sorted_images.sort()
+    
+    for s in sorted_images:
+        logging.log(level=logging.DATA, msg="current s variable: %s" % (s))
         players.setImage('images/%s/%s' % (key,s))
         players.draw()
         win.flip()
         core.wait(0.15)
     
+    # update trial and round counters
     trialCnt+=1
     rndCnt+=1
-    holder=toP
+    
+    # set the new holder to be the person to whom it was thrown
+    holder=toP # not the issue with images
     logging.flush()
     select_throw()
 
+# allow the participant to throw the ball
 def select_throw(): #runs if subject has ball
     global condition
     if holder==2: #if subject has ball
+        
+        # update logs to reflect participant ownership
         logging.log(level=logging.DATA,msg="PLAYER HAS BALL")
         got_ball_time = trialClock.getTime()
         
@@ -369,8 +387,8 @@ log_file = logging.LogFile("logs/%s.log" % (subj_id),  level=logging.DATA, filem
 logging.log(level=logging.DATA, msg="START")
 
 logging.log(level=logging.DATA, msg="Intro Survey")
-survey_intro()
-show_instructions()
+#survey_intro() #commented out for pupil testing
+#show_instructions() #commented out for pupil testing
 ready_screen.setText("Press Space to start")
 ready_screen.draw()
 win.flip()
@@ -417,9 +435,9 @@ while (round-incRounds)<=exRounds:
     round+=1
 
 show_images() #show images
-survey_outro() #show survey again
-goodbye.setText("Goodbye!\nThanks for participating %s." % player_name)
+#survey_outro() #show survey again #commented out for pupil testing
+goodbye.setText("You have completed this research study, congratulations!\nThank you for your participation. Please wait for the experimenter to come over and remove the eyetrackers")
 goodbye.draw()
 win.flip()
-core.wait(7.5)     
+core.wait(7.5)
 logging.log(level=logging.DATA, msg="END")
