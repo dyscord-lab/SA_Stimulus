@@ -46,7 +46,7 @@ blank <- readPNG('../blank.png')
 
 setwd("../stimuli")
 # loop for image generation
-for (i in 1:58) {
+for (i in 1:1) {
   
   # identifying NAMES of unique QR markers
   RUname <- stimuli[i, 2]
@@ -63,7 +63,7 @@ for (i in 1:58) {
   g <- arrangeGrob(rasterGrob(readPNG(RUname)), rasterGrob(blank), rasterGrob(readPNG(LUname)), 
                    rasterGrob(blank), rasterGrob(image), rasterGrob(blank), 
                    rasterGrob(readPNG(RDname)), rasterGrob(blank), rasterGrob(readPNG(LDname)), 
-                   ncol=3, widths = c(.5,5,.5), heights = c(.5,2,.5))
+                   ncol=3, widths = c(.5,15,.5), heights = c(.6,2,.6))
   setwd("../")
   mypath <- "../showpics/"
   ggsave(file = paste0(mypath, i, ".png"), g) # "image_i.png" to have unique file names
