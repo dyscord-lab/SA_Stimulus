@@ -73,7 +73,7 @@ player3_name = players[room][1]
 
   
 ################
-# Set up images #
+# Set up images (for players) #
 ################
 paths = [d for d in os.listdir('images') if d[1:3]=='to']
 throw={}
@@ -180,12 +180,13 @@ def show_images():
     win.flip()
     core.wait(9)
     event.clearEvents()
-    for k in pix:
+    for k in pix:    # need to resize images HERE
         pic = visual.ImageStim(win, image='showpics/%i.png' % (k+1))
         print(k+1)
+        pic.size*=(0.5, 0.5)
         pic.draw()
         win.flip()
-        core.wait(30) #set how long images stay
+        core.wait(1) #set how long images stay
     win.flip()
 
 def survey_outro():
@@ -363,6 +364,7 @@ def play_round():
 
 # ================================
 # setup logging #
+# ================================
 log_file = logging.LogFile("logs/%s.log" % (subj_id),  level=logging.DATA, filemode="w")
 logging.log(level=logging.DATA, msg="START")
 
