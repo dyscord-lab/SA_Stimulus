@@ -36,11 +36,11 @@ condition="FBALL"
 instructions1 = '''
 In the upcoming task, we will test the effects of practicing mental visualization on task performance. Thus, we need you to practice your mental visualization skills. We have found that the best way to do this is to have you play an on-line ball tossing game with other participants who are logged on to the system at the same time.
 
-In a few moments, you will be playing a ball-tossing game with other students over our network. Several universities in the state of Michigan are taking part in a collaborative investigation of the effects of mental visualization on task performance, with high school students participating at several different Universities around the state of Michigan.
+In a few moments, you will be playing a ball-tossing game with other students over our network. Several universities in the state of Connecticut are taking part in a collaborative investigation of the effects of mental visualization on task performance, with college students participating at several different Universities around the state of Connecticut.
 '''
 
 instructions2 = '''
-The game is very simple. When the ball is tossed to you, simply press either the "2" key (pointer finger) to throw to the player on your left or the "3" key (middle finger) for to throw to the player on your right. When the game is over, the experimenter will give you additional instructions.
+The game is very simple. When the ball is tossed to you, simply press either the "2" key (pointer finger) to throw to the player on your left or the "3" key (middle finger) for to throw to the player on your right. When the game is over, the next part of the experiment begin.
 
 What is important is not your ball tossing performance, but that you MENTALLY VISUALIZE the entire experience. Imagine what the others look like. What sort of people are they? Where are you playing? Is it warm and sunny or cold and rainy? Create in your mind a complete mental picture of what might be going on if you were playing this game in real life.
 '''
@@ -90,10 +90,10 @@ useFullScreen=True #Set to true for full screen
 win = visual.Window([1680,1050], monitor="testMonitor", units="deg", fullscr=useFullScreen, allowGUI=False, color="#FFFFFF")
 
 ################
-# Set up stimuli #
+# Set up text #
 ################ 
 
-title=visual.TextStim(win,text="Welcome to the Virtual Ball-Tossing Game, an Interactive Task Used for Mental Visualization!", height=0.8, pos=(0,7),color="#000000")
+title=visual.TextStim(win,text="Welcome to the Virtual Ball-Tossing Game, an Interactive Task Used for Mental Visualization!", height=0.8, pos=(0,7),color="#000000") # CHANGE: Center this
 instrText = visual.TextStim(win, text="",height=0.6, color="#000000", wrapWidth=16) #empty text, optional to fill
 instrKey = visual.TextStim(win, text="", height=0.6, color="#000000", pos=(0,-5))
 instr_p1 = visual.TextStim(win, text="",color="#000000", pos=(-6,3), height=0.6, alignHoriz="left")
@@ -102,8 +102,8 @@ instr_p3 = visual.TextStim(win, text="",color="#000000", pos=(-6, -3), height=0.
 p1_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,3.15), alignHoriz="left")
 p3_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,-2.85), alignHoriz="left")
 
-instr1 = visual.TextStim(win, text="Welcome to the experiment. First, you are going to play and interactive ball tossing game. Press any key to continue." , color="#000000")
-instr2= visual.TextStim(win, text="Look at some pictures. intructions instructions" , color="#000000")
+instr1 = visual.TextStim(win, text="Welcome to the lab, thank you for participating in our experiment! First, you are going to answer a series of questions. Please select the response that most applies to you. Press any key to continue." , color="#000000") # CHANGE: Make this bigger, maybe centered. See what the instructions are for this measure
+instr2= visual.TextStim(win, text="Thank you for playing!" , color="#000000")
 instr3= visual.TextStim(win, text="final bullshit. press any key to continue" , color="#000000")
 imagestart= visual.TextStim(win, text="You will now view a series of images. Try to visualize yourself actually being in each scene." , color="#000000")
 
@@ -121,7 +121,9 @@ p3name = visual.TextStim(win,text=player3_name,color="#000000", pos=(6,2), heigh
 
 ready_screen = visual.TextStim(win, text="Ready.....", height=1.2, color="#000000")
 
-#intro questions
+#==============================
+# Survey
+#==============================
 q1="I feel interested"
 q2= "I feel distressed"
 q3= "I feel excited"
@@ -146,10 +148,12 @@ q20="I feel afraid"
 qlibrary = {1:q1, 2:q2, 3:q3, 4:q4, 5:q5, 6:q6, 7:q7, 8:q8, 9:q9, 10:q10, 11:q11, 12:q12, 13:q13, 14:q14, 15:q15, 16:q16, 17:q17, 18:q18, 19:q19, 20:q20} 
 questions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] #list of qs
 
+# setting up the stimuli for eye-tracking
 piktures = 58 #numbers of pictures in folder
 pix = list(range(0, piktures))
 shuffle(pix) #randomized order of pictures
 
+# intro survey
 def survey_intro():
     shuffle(questions) #randomize order of questions
     event.clearEvents()
@@ -185,13 +189,14 @@ def show_images():
     for k in pix:    # need to resize images HERE
         pic = visual.ImageStim(win, image='showpics/%i.png' % (k+1))
         print(k+1)
-        pic.size*=(0.8, 0.8)
+        pic.size*=(0.6, 0.6)
         pic.draw()
         pic.draw()
         win.flip()
-        core.wait(1) #set how long images stay
+        core.wait(10) #set how long images stay
     win.flip()
 
+# ending survey
 def survey_outro():
     shuffle(questions) #randomize order of questions
     event.clearEvents()
@@ -212,6 +217,7 @@ def survey_outro():
         response = myRatingScale.getRating()
         logging.log(level=logging.DATA, msg="Question Number: %i , Response: %s" % (i, response))
 
+# Showing text and instructions for tossing game
 def show_instructions():
     title.setAutoDraw(True)
     instrText.setText(instructions1)
@@ -274,12 +280,14 @@ def show_instructions():
     instr_p2.setAutoDraw(False)
     instr_p3.setAutoDraw(False)
 
+# setting up the player names
 def player_names(state=True):
     p1name.setAutoDraw(state)
     p2name.setAutoDraw(state)
     p3name.setAutoDraw(state)
 
-def throw_ball(fromP, toP): #log the throw and add counters to roundcount and trialcount
+# log the throw and add counters to roundcount and trialcount
+def throw_ball(fromP, toP): 
     global trialCnt, holder, rndCnt
     key = "%ito%i" % (fromP,toP)
     
@@ -352,10 +360,9 @@ def select_throw(): #runs if subject has ball
         logging.log(level=logging.DATA,msg="RETURN with %i Trial Count and %i Trial Clock" % (trialCnt, trialClock.getTime()))
         return
     else:
-        throw_ball(holder,throwTo)
+        throw_ball(holder,throwTo) 
 
-# start 
-
+# counting # of rounds
 def play_round():
     global rndCnt
     rndCnt=0
@@ -387,15 +394,17 @@ log_file = logging.LogFile("logs/%s.log" % (subj_id),  level=logging.DATA, filem
 logging.log(level=logging.DATA, msg="START")
 
 logging.log(level=logging.DATA, msg="Intro Survey")
-#survey_intro() #commented out for pupil testing
-#show_instructions() #commented out for pupil testing
+
+# starting the INTRO SURVEY
+survey_intro() #commented out for pupil testing
+show_instructions() #commented out for pupil testing
 ready_screen.setText("Press Space to start")
 ready_screen.draw()
 win.flip()
 event.waitKeys(keyList=['space'])
 
 #################
-# Trigger scanner #
+# Trigger scanner # WHAT DOES THIS DO ??
 #################
 globalClock = core.Clock()
 trialClock = core.Clock()
@@ -434,8 +443,9 @@ while (round-incRounds)<=exRounds:
     trialCnt=0
     round+=1
 
+# calling stimuli and final survey
 show_images() #show images
-#survey_outro() #show survey again #commented out for pupil testing
+survey_outro() #show survey again #commented out for pupil testing
 goodbye.setText("You have completed this research study, congratulations!\nThank you for your participation. Please wait for the experimenter to come over and remove the eyetrackers")
 goodbye.draw()
 win.flip()
