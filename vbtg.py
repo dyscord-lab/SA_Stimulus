@@ -93,12 +93,12 @@ win = visual.Window([1680,1050], monitor="testMonitor", units="deg", fullscr=use
 # Set up text #
 ################
 
-title=visual.TextStim(win,text="", height=0.8, pos=(0,7),color="#000000", alignHoriz="center") # CHANGE: Center this
-instrText = visual.TextStim(win, text="",height=0.6, color="#000000", wrapWidth=16) #empty text, optional to fill
-instrKey = visual.TextStim(win, text="", height=0.6, color="#000000", pos=(0,-5))
-instr_p1 = visual.TextStim(win, text="",color="#000000", pos=(-6,3), height=0.6, alignHoriz="left")
-instr_p2 = visual.TextStim(win, text="",color="#000000", pos=(-6, 0), height=0.6, alignHoriz="left")
-instr_p3 = visual.TextStim(win, text="",color="#000000", pos=(-6, -3), height=0.6, alignHoriz="left")
+title=visual.TextStim(win,text="", height=2, pos=(0,7),color="#000000", alignHoriz="center") # CHANGE: Center this
+instrText = visual.TextStim(win, text="",height=1.5, color="#000000", wrapWidth=16) #empty text, optional to fill
+instrKey = visual.TextStim(win, text="", height=1.5, color="#000000", pos=(0,-5))
+instr_p1 = visual.TextStim(win, text="",color="#000000", pos=(-6,3), height=1.5, alignHoriz="left")
+instr_p2 = visual.TextStim(win, text="",color="#000000", pos=(-6, 0), height=1.5, alignHoriz="left")
+instr_p3 = visual.TextStim(win, text="",color="#000000", pos=(-6, -3), height=1.5, alignHoriz="left")
 p1_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,3.15), alignHoriz="left")
 p3_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,-2.85), alignHoriz="left")
 
@@ -110,9 +110,9 @@ This experiment is about mental visualization.
 First, you'll be asked to answer a series of questions. Please select the response that most applies to you.
 
 Press any key to continue.''' , color="#000000", alignHoriz="center") # CHANGE: Make this bigger. See what the instructions are for this measure
-instr2= visual.TextStim(win, text="", alignHoriz="center", color="#000000")
-instr3= visual.TextStim(win, text="final bullshit. press any key to continue" , alignHoriz="center", color="#000000") # this needs to be updated
-imagestart= visual.TextStim(win, text="You will now view a series of images. Each image will appear for XXX seconds. Try to visualize yourself actually being in each scene.", color="#000000", alignHoriz="center") # NEED TO UPDATE THE TOTAL SECONDS
+instr2= visual.TextStim(win, text="", height=1.5, alignHoriz="center", color="#000000")
+instr3= visual.TextStim(win, text="final bullshit. press any key to continue" , height=1.5, alignHoriz="center", color="#000000") # this needs to be updated
+imagestart= visual.TextStim(win, text="You will now view a series of images. Each image will appear for XXX seconds. Try to visualize yourself actually being in each scene.", height=1.5, color="#000000", alignHoriz="center") # NEED TO UPDATE THE TOTAL SECONDS
 
 players = visual.SimpleImageStim(win, image='images/start.bmp')
 
