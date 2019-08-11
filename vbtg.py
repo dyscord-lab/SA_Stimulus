@@ -43,7 +43,7 @@ In a few moments, you will be playing a ball-tossing game with other students ov
 instructions2 = '''
 The game is very simple. If you are right-handed, put your pointer finger on the "2" key and your middle finger on the "3" key. If you are left-handed, put your middle finger on the "2" key and your pointer finger on the "3" key.
 
-When the ball is tossed to you, simply press either the "2" key to throw to the player on your left or the "3" keyto throw to the player on your right. When the game is over, the next part of the experiment will begin.
+When the ball is tossed to you, simply press either the "2" key to throw to the player on your left or the "3" key to throw to the player on your right. When the game is over, the next part of the experiment will begin.
 
 What is important is not your ball tossing performance, but that you MENTALLY VISUALIZE the entire experience. Imagine what the other players look like. What sort of people are they? Where are you playing? Is it warm and sunny or cold and rainy? Create in your mind a complete mental picture of what might be going on if you were playing this game in real life.'''
 
