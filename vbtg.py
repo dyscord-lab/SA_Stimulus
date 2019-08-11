@@ -103,10 +103,16 @@ p1_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,3.15), alignHor
 p3_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,-2.85), alignHoriz="left")
 
 # set instructions
-instr1 = visual.TextStim(win, text="Thank you for participating in our experiment! This experiment is about mental visualization. First, you'll be asked to answer a series of questions. Please select the response that most applies to you. Press any key to continue." , color="#000000", alignHoriz="center") # CHANGE: Make this bigger. See what the instructions are for this measure
+instr1 = visual.TextStim(win, text='''Thank you for participating in our experiment!
+
+This experiment is about mental visualization.
+
+First, you'll be asked to answer a series of questions. Please select the response that most applies to you.
+
+Press any key to continue.''' , color="#000000", alignHoriz="center") # CHANGE: Make this bigger. See what the instructions are for this measure
 instr2= visual.TextStim(win, text="", alignHoriz="center", color="#000000")
 instr3= visual.TextStim(win, text="final bullshit. press any key to continue" , alignHoriz="center", color="#000000") # this needs to be updated
-imagestart= visual.TextStim(win, text="You will now view a series of images. Each image will appear for XXX seconds. Try to visualize yourself actually being in each scene.", color="#000000", alignHoriz="center")
+imagestart= visual.TextStim(win, text="You will now view a series of images. Each image will appear for XXX seconds. Try to visualize yourself actually being in each scene.", color="#000000", alignHoriz="center") # NEED TO UPDATE THE TOTAL SECONDS
 
 players = visual.SimpleImageStim(win, image='images/start.bmp')
 
@@ -179,7 +185,9 @@ def survey_intro():
 def show_images():
     event.clearEvents()
     instr2.draw()
-    instrKey.setText("PRESS 2 [pointer finger] to continue")
+    instrKey.setText('''
+
+    PRESS 2 [pointer finger] to continue''')
     instrKey.draw()
     win.flip()
     event.waitKeys(keyList=['2'])
@@ -225,14 +233,18 @@ def show_instructions():
     instrText.setAutoDraw(True)
     win.flip()
     #core.wait(20)
-    instrKey.setText("PRESS 2 [pointer finger] to continue")
+    instrKey.setText('''
+
+    PRESS 2 [pointer finger] to continue''')
     instrKey.draw()
     win.flip()
     event.waitKeys(keyList=['2'])
     instrText.setText(instructions2)
     win.flip()
     #core.wait(20)
-    instrKey.setText("PRESS 3 [middle finger] to begin...")
+    instrKey.setText('''
+
+    PRESS 3 [middle finger] to begin''')
     instrKey.draw()
     win.flip()
     event.waitKeys(keyList=['3'])
@@ -399,7 +411,9 @@ logging.log(level=logging.DATA, msg="Intro Survey")
 # starting the INTRO SURVEY
 survey_intro() #commented out for pupil testing
 show_instructions() #commented out for pupil testing
-ready_screen.setText("Press Space to start")
+ready_screen.setText('''
+
+Press Space to start''')
 ready_screen.draw()
 win.flip()
 event.waitKeys(keyList=['space'])
@@ -447,7 +461,9 @@ while (round-incRounds)<=exRounds:
 # calling stimuli and final survey
 show_images() #show images
 survey_outro() #show survey again #commented out for pupil testing
-goodbye.setText("You have completed this research study, congratulations!\nThank you for your participation. Please wait for the experimenter to come over and remove the eyetrackers")
+goodbye.setText('''You have completed this research study. Thank you for your participation!
+
+Please wait for the experimenter to come over and remove the eyetracker. The experimenter will also give you more information about the purpose of this study and give you the opportunity to ask questions.''')
 goodbye.draw()
 win.flip()
 core.wait(7.5)
