@@ -34,15 +34,15 @@ condition="FBALL"
 
 # these instructions aren't displayed anywhere when run??
 instructions1 = '''
-In the upcoming task, we will test the effects of practicing mental visualization on task performance. Thus, we need you to practice your mental visualization skills. We have found that the best way to do this is to have you play an on-line ball tossing game with other participants who are logged on to the system at the same time.
+In the upcoming task, we will test the effects of practicing mental visualization on task performance, so we need you to practice your mental visualization skills. We have found that the best way to do this is to have you play an online ball tossing game with other participants who are logged on to the system at the same time.
 
-In a few moments, you will be playing a ball-tossing game with other students over our network. Several universities in the state of Connecticut are taking part in a collaborative investigation of the effects of mental visualization on task performance, with college students participating at several different Universities around the state of Connecticut.
+In a few moments, you will be playing a ball-tossing game with other students over our network. Several universities in the state of Connecticut are taking part in a collaborative investigation of the effects of mental visualization on task performance, with college students participating at several different universities around the state of Connecticut.
 '''
 
 instructions2 = '''
-The game is very simple. When the ball is tossed to you, simply press either the "2" key (pointer finger) to throw to the player on your left or the "3" key (middle finger) for to throw to the player on your right. When the game is over, the next part of the experiment begin.
+The game is very simple. Put your pointer finger on the "2" key and your middle finger on the "3" key. When the ball is tossed to you, simply press either the "2" key (with your pointer finger) to throw to the player on your left or the "3" key (with your middle finger) to throw to the player on your right. When the game is over, the next part of the experiment will begin.
 
-What is important is not your ball tossing performance, but that you MENTALLY VISUALIZE the entire experience. Imagine what the others look like. What sort of people are they? Where are you playing? Is it warm and sunny or cold and rainy? Create in your mind a complete mental picture of what might be going on if you were playing this game in real life.
+What is important is not your ball tossing performance, but that you <b>mentally visualize</b> the entire experience. Imagine what the other players look like. What sort of people are they? Where are you playing? Is it warm and sunny or cold and rainy? Create in your mind a complete mental picture of what might be going on if you were playing this game in real life.
 '''
 
 
