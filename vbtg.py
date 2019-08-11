@@ -107,12 +107,18 @@ instr1 = visual.TextStim(win, text='''Thank you for participating in our experim
 
 This experiment is about mental visualization.
 
-First, you'll be asked to answer a series of questions. Please select the response that most applies to you.
+First, you'll be asked to answer a series of questions. This scale consists of a number of statements that describe different feelings and emotions. 
+
+Read each item and then mark the appropriate answer. Indicate to what extent you agree with each statement right now.
 
 Press any key to continue.''' , color="#000000", alignHoriz="center") # CHANGE: Make this bigger. See what the instructions are for this measure
 instr2= visual.TextStim(win, text="", height=1.5, alignHoriz="center", color="#000000")
-instr3= visual.TextStim(win, text="final bullshit. press any key to continue" , height=1.5, alignHoriz="center", color="#000000") # this needs to be updated
-imagestart= visual.TextStim(win, text="You will now view a series of images. Each image will appear for XXX seconds. Try to visualize yourself actually being in each scene.", height=1.5, color="#000000", alignHoriz="center") # NEED TO UPDATE THE TOTAL SECONDS
+instr3= visual.TextStim(win, text='''You'll now be asked to answer a series of questions. This scale consists of a number of statements that describe different feelings and emotions. 
+
+Read each item and then mark the appropriate answer. Indicate to what extent you agree with each statement right now.
+
+Press any key to continue.''' , height=1.5, alignHoriz="center", color="#000000") # this needs to be updated
+imagestart= visual.TextStim(win, text="You will now view a series of images. Each image will appear for 30 seconds. Try to visualize yourself actually being in each scene.", height=1.5, color="#000000", alignHoriz="center") 
 
 players = visual.SimpleImageStim(win, image='images/start.bmp')
 
