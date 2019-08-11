@@ -63,16 +63,16 @@ if gui.OK:
         room=0
 else:
     sys.exit()
- 
- 
-players=[["Justin", "Will"], #assigned through room number
-                ["Nick", "Robin"], 
-                ["John", "Andrew"]]
+
+
+players=[["Jesse", "Max"], #assigned through room number
+         ["Alex", "Robin"],
+         ["Kai", "Adrian"]]
 
 player1_name = players[room][0]
 player3_name = players[room][1]
 
-  
+
 ################
 # Set up images (for players) #
 ################
