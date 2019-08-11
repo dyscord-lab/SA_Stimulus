@@ -34,7 +34,7 @@ condition="FBALL"
 
 # these instructions aren't displayed anywhere when run??
 instructions1 = '''
-In the upcoming task, we will test the effects of practicing mental visualization on task performance, so we need you to practice your mental visualization skills. We have found that the best way to do this is to have you play an online ball tossing game with other participants who are logged on to the system at the same time.
+For the next part of the experiment, we will test the effects of practicing mental visualization on task performance, so we need you to practice your mental visualization skills. We have found that the best way to do this is to have you play an online ball tossing game with other participants who are logged on to the system at the same time.
 
 In a few moments, you will be playing a ball-tossing game with other students over our network. Several universities in the state of Connecticut are taking part in a collaborative investigation of the effects of mental visualization on task performance, with college students participating at several different universities around the state of Connecticut.
 '''
@@ -42,7 +42,7 @@ In a few moments, you will be playing a ball-tossing game with other students ov
 instructions2 = '''
 The game is very simple. Put your pointer finger on the "2" key and your middle finger on the "3" key. When the ball is tossed to you, simply press either the "2" key (with your pointer finger) to throw to the player on your left or the "3" key (with your middle finger) to throw to the player on your right. When the game is over, the next part of the experiment will begin.
 
-What is important is not your ball tossing performance, but that you <b>mentally visualize</b> the entire experience. Imagine what the other players look like. What sort of people are they? Where are you playing? Is it warm and sunny or cold and rainy? Create in your mind a complete mental picture of what might be going on if you were playing this game in real life.
+What is important is not your ball tossing performance, but that you MENTALLY VISUALIZE the entire experience. Imagine what the other players look like. What sort of people are they? Where are you playing? Is it warm and sunny or cold and rainy? Create in your mind a complete mental picture of what might be going on if you were playing this game in real life.
 '''
 
 
@@ -93,7 +93,7 @@ win = visual.Window([1680,1050], monitor="testMonitor", units="deg", fullscr=use
 # Set up text #
 ################
 
-title=visual.TextStim(win,text="Welcome to the Virtual Ball-Tossing Game, an Interactive Task Used for Mental Visualization!", height=0.8, pos=(0,7),color="#000000") # CHANGE: Center this
+title=visual.TextStim(win,text="", height=0.8, pos=(0,7),color="#000000", alignHoriz="center") # CHANGE: Center this
 instrText = visual.TextStim(win, text="",height=0.6, color="#000000", wrapWidth=16) #empty text, optional to fill
 instrKey = visual.TextStim(win, text="", height=0.6, color="#000000", pos=(0,-5))
 instr_p1 = visual.TextStim(win, text="",color="#000000", pos=(-6,3), height=0.6, alignHoriz="left")
@@ -102,10 +102,11 @@ instr_p3 = visual.TextStim(win, text="",color="#000000", pos=(-6, -3), height=0.
 p1_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,3.15), alignHoriz="left")
 p3_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,-2.85), alignHoriz="left")
 
-instr1 = visual.TextStim(win, text="Welcome to the lab, thank you for participating in our experiment! First, you are going to answer a series of questions. Please select the response that most applies to you. Press any key to continue." , color="#000000") # CHANGE: Make this bigger, maybe centered. See what the instructions are for this measure
-instr2= visual.TextStim(win, text="Thank you for playing!" , color="#000000")
-instr3= visual.TextStim(win, text="final bullshit. press any key to continue" , color="#000000")
-imagestart= visual.TextStim(win, text="You will now view a series of images. Try to visualize yourself actually being in each scene." , color="#000000")
+# set instructions
+instr1 = visual.TextStim(win, text="Thank you for participating in our experiment! This experiment is about mental visualization. First, you'll be asked to answer a series of questions. Please select the response that most applies to you. Press any key to continue." , color="#000000", alignHoriz="center") # CHANGE: Make this bigger. See what the instructions are for this measure
+instr2= visual.TextStim(win, text="", alignHoriz="center", color="#000000")
+instr3= visual.TextStim(win, text="final bullshit. press any key to continue" , alignHoriz="center", color="#000000") # this needs to be updated
+imagestart= visual.TextStim(win, text="You will now view a series of images. Each image will appear for XXX seconds. Try to visualize yourself actually being in each scene.", color="#000000", alignHoriz="center")
 
 players = visual.SimpleImageStim(win, image='images/start.bmp')
 
