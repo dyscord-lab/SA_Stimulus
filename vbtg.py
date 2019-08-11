@@ -32,13 +32,14 @@ trialCnt=0
 rndCnt=0
 condition="FBALL"
 
-# these instructions aren't displayed anywhere when run??
+# create first set of instructions for ball-tossing
 instructions1 = '''
 For the next part of the experiment, we will test the effects of practicing mental visualization on task performance, so we need you to practice your mental visualization skills. We have found that the best way to do this is to have you play an online ball tossing game with other participants who are logged on to the system at the same time.
 
 In a few moments, you will be playing a ball-tossing game with other students over our network. Several universities in the state of Connecticut are taking part in a collaborative investigation of the effects of mental visualization on task performance, with college students participating at several different universities around the state of Connecticut.
 '''
 
+# create second set of instructions for ball-tossing
 instructions2 = '''
 The game is very simple. If you are right-handed, put your pointer finger on the "2" key and your middle finger on the "3" key. If you are left-handed, put your middle finger on the "2" key and your pointer finger on the "3" key.
 
@@ -102,7 +103,6 @@ p1_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,3.15), alignHor
 p3_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,-2.85), alignHoriz="left")
 
 # set instructions
-<<<<<<< HEAD
 instr1 = visual.TextStim(win, text='''Thank you for participating in our experiment!
 
 This experiment is about mental visualization.
@@ -113,12 +113,6 @@ Press any key to continue.''' , color="#000000", alignHoriz="center") # CHANGE: 
 instr2= visual.TextStim(win, text="", alignHoriz="center", color="#000000")
 instr3= visual.TextStim(win, text="final bullshit. press any key to continue" , alignHoriz="center", color="#000000") # this needs to be updated
 imagestart= visual.TextStim(win, text="You will now view a series of images. Each image will appear for XXX seconds. Try to visualize yourself actually being in each scene.", color="#000000", alignHoriz="center") # NEED TO UPDATE THE TOTAL SECONDS
-=======
-instr1 = visual.TextStim(win, text="Thank you for participating in our experiment! This experiment is about mental visualization. First, you'll be asked to answer a series of questions. This scale consists of a number of statements that describe different feelings and emotions. Read each item and then mark the appropriate answer !!! on the line below each statement !!! (Different wording here than in the IRB). Indicate to what extent you agree with each statement right now. Press any key to continue." , color="#000000", alignHoriz="center") # CHANGE: Make this bigger. See what the instructions are for this measure
-instr2= visual.TextStim(win, text="", alignHoriz="center", color="#000000")
-instr3= visual.TextStim(win, text="See instr1 for issue here... Press any key to continue" , alignHoriz="center", color="#000000") # this needs to be updated
-imagestart= visual.TextStim(win, text="You will now view a series of images. Each image will appear for XXX seconds. Try to visualize yourself actually being in each scene.", color="#000000", alignHoriz="center")
->>>>>>> ab5bf4314e0afa22ab2475b5563ddea404fd45f4
 
 players = visual.SimpleImageStim(win, image='images/start.bmp')
 
