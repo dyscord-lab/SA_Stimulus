@@ -1,7 +1,7 @@
 
-# Virtual Ball Toss Game 
+# Virtual Ball Toss Game
 # version of 'Cyberball' - https://www.ncbi.nlm.nih.gov/pubmed/16817529
-# for PsychoPy (using Python2.7) 
+# for PsychoPy (using Python2.7)
 
 # developed by for use as an fMRI task by the Communication Neuroscience Lab
 # original Matlab implementation by Josh Carp
@@ -81,7 +81,7 @@ throw={}
 for p in paths:
     throw[p]=[f for f in os.listdir('images/%s' % p) if f.endswith('.bmp')]
 
- 
+
 ################
 # Set up window #
 ################
@@ -91,7 +91,7 @@ win = visual.Window([1680,1050], monitor="testMonitor", units="deg", fullscr=use
 
 ################
 # Set up text #
-################ 
+################
 
 title=visual.TextStim(win,text="Welcome to the Virtual Ball-Tossing Game, an Interactive Task Used for Mental Visualization!", height=0.8, pos=(0,7),color="#000000") # CHANGE: Center this
 instrText = visual.TextStim(win, text="",height=0.6, color="#000000", wrapWidth=16) #empty text, optional to fill
@@ -145,7 +145,7 @@ q18="I feel jittery"
 q19="I feel active"
 q20="I feel afraid"
 #create question library
-qlibrary = {1:q1, 2:q2, 3:q3, 4:q4, 5:q5, 6:q6, 7:q7, 8:q8, 9:q9, 10:q10, 11:q11, 12:q12, 13:q13, 14:q14, 15:q15, 16:q16, 17:q17, 18:q18, 19:q19, 20:q20} 
+qlibrary = {1:q1, 2:q2, 3:q3, 4:q4, 5:q5, 6:q6, 7:q7, 8:q8, 9:q9, 10:q10, 11:q11, 12:q12, 13:q13, 14:q14, 15:q15, 16:q16, 17:q17, 18:q18, 19:q19, 20:q20}
 questions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] #list of qs
 
 # setting up the stimuli for eye-tracking
@@ -236,12 +236,12 @@ def show_instructions():
     win.flip()
     event.waitKeys(keyList=['3'])
     instrText.setAutoDraw(False)
-    
+
     p1_ticker="."
     p3_ticker="."
     p1_ticker_end=45 #time to load players: make longer for more realistic interactive game
     p3_ticker_end=125
-    
+
     title.setText('Joining VBT Game Room')
     instr_p1.setText("PLAYER 1: Wating for player to join") #loading screen
     instr_p2.setText("PLAYER 2: Welcome %s" % player_name)
@@ -274,7 +274,7 @@ def show_instructions():
                 p3_tick.setText(p3_ticker)
         win.flip()
     core.wait(2)
-    
+
     title.setAutoDraw(False)
     instr_p1.setAutoDraw(False)
     instr_p2.setAutoDraw(False)
@@ -287,31 +287,31 @@ def player_names(state=True):
     p3name.setAutoDraw(state)
 
 # log the throw and add counters to roundcount and trialcount
-def throw_ball(fromP, toP): 
+def throw_ball(fromP, toP):
     global trialCnt, holder, rndCnt
     key = "%ito%i" % (fromP,toP)
-    
+
     logging.log(level=logging.DATA, msg="round %i - trial %i - throw: %s - %s" % (round, trialCnt, key, condition))
-    
+
     logging.log(level=logging.DATA, msg="throw variable: %s" % (throw))
     logging.log(level=logging.DATA, msg="key variable: %s" % (key))
-    
+
     sorted_images = []
     for next_image in throw[key]:
         sorted_images.append(next_image)
     sorted_images.sort()
-    
+
     for s in sorted_images:
         logging.log(level=logging.DATA, msg="current s variable: %s" % (s))
         players.setImage('images/%s/%s' % (key,s))
         players.draw()
         win.flip()
         core.wait(0.15)
-    
+
     # update trial and round counters
     trialCnt+=1
     rndCnt+=1
-    
+
     # set the new holder to be the person to whom it was thrown
     holder=toP # not the issue with images
     logging.flush()
@@ -321,11 +321,11 @@ def throw_ball(fromP, toP):
 def select_throw(): #runs if subject has ball
     global condition
     if holder==2: #if subject has ball
-        
+
         # update logs to reflect participant ownership
         logging.log(level=logging.DATA,msg="PLAYER HAS BALL")
         got_ball_time = trialClock.getTime()
-        
+
         choice=[]
         while len(choice)==0 or choice [0] not in ('2','3'): #waiting for subject to make choice
             core.wait(0.01)
@@ -336,17 +336,17 @@ def select_throw(): #runs if subject has ball
             throwTo=1
         elif choice[0]=='3':
             throwTo=3
-            
+
         logging.log(level=logging.DATA,msg="PLAYER THROWS TO %i - RT %0.4f" % (throwTo, trialClock.getTime()-got_ball_time))
     else:
         core.wait(random.randint(500,2000)/1000) #range for simulation to "decide" where to throw
-    
+
         if round>incRounds and rndCnt>7: #start excluding player after 7 throws in exclusion round
             condition="UBALL"
             ft=0.3
         else:
             ft=0.0
-        
+
         throwChoice = random.random() - ft #change equation so subject is less likely to recieve ball
         if throwChoice < 0.5:
             if holder==1:
@@ -355,12 +355,12 @@ def select_throw(): #runs if subject has ball
                 throwTo=1
         else:
             throwTo=2
-    
+
     if trialCnt > maxTrials or trialClock.getTime() > maxTime:
         logging.log(level=logging.DATA,msg="RETURN with %i Trial Count and %i Trial Clock" % (trialCnt, trialClock.getTime()))
         return
     else:
-        throw_ball(holder,throwTo) 
+        throw_ball(holder,throwTo)
 
 # counting # of rounds
 def play_round():
@@ -412,7 +412,7 @@ logging.setDefaultClock(globalClock)
 
 # ADD TRIGGER CODE - 255 on serial port - if scanner is expecting to receive a 'start' trigger
 # from task
-# some scanners may send a trigger code (i.e. a '5' or a 't') on each TR 
+# some scanners may send a trigger code (i.e. a '5' or a 't') on each TR
 # in which case code here should be adapted (or above where task waits for a space bar to start)
 try:
     ser = serial.Serial('/dev/tty.KeySerial1', 9600, timeout=1)
