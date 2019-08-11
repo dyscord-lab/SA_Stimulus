@@ -221,7 +221,7 @@ def show_images():
         pic.draw()
         pic.draw()
         win.flip()
-        core.wait(1) #set how long images stay
+        core.wait(5) #set how long images stay
     win.flip()
 
 # ending survey
