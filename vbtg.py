@@ -159,7 +159,7 @@ q29="If I know soemone is judging me, it tends to bother me."
 q30="Sometimes I think I am too concerned with what other people think of me."
 q31="I often worry that I will say or do wrong things."
 #create question library
-qlibrary = {1:q1, 2:q2, 3:q3, 4:q4, 5:q5, 6:q6, 7:q7, 8:q8, 9:q9, 10:q10, 11:q11, 12:q12, 13:q13, 14:q14, 15:q15, 16:q16, 17:q17, 18:q18, 19:q19, 20:q20, 21=q21, 22=q22, 23=q23, 24=q24, 25=q25, 26=q26, 27=q27, 28=q28, 29=q29, 30=q30, 31=q31}
+qlibrary = {1:q1, 2:q2, 3:q3, 4:q4, 5:q5, 6:q6, 7:q7, 8:q8, 9:q9, 10:q10, 11:q11, 12:q12, 13:q13, 14:q14, 15:q15, 16:q16, 17:q17, 18:q18, 19:q19, 20:q20, 21:q21, 22:q22, 23:q23, 24:q24, 25:q25, 26:q26, 27:q27, 28:q28, 29:q29, 30:q30, 31:q31}
 questions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31] #list of qs
 
 # setting up the stimuli for eye-tracking
@@ -458,7 +458,7 @@ while (round-incRounds)<=exRounds:
     round+=1
 
 # calling stimuli and final survey
-show_images() #show images
+#show_images() #show images
 survey_outro() #show survey again #commented out for pupil testing
 goodbye.setText("You have completed this research study, congratulations!\nThank you for your participation. Please wait for the experimenter to come over and remove the eyetrackers")
 goodbye.draw()
