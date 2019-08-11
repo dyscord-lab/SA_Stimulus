@@ -105,7 +105,7 @@ p3_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,-2.85), alignHo
 # set instructions
 instr1 = visual.TextStim(win, text="Thank you for participating in our experiment! This experiment is about mental visualization. First, you'll be asked to answer a series of questions. This scale consists of a number of statements that describe different feelings and emotions. Read each item and then mark the appropriate answer !!! on the line below each statement !!! (Different wording here than in the IRB). Indicate to what extent you agree with each statement right now. Press any key to continue." , color="#000000", alignHoriz="center") # CHANGE: Make this bigger. See what the instructions are for this measure
 instr2= visual.TextStim(win, text="", alignHoriz="center", color="#000000")
-instr3= visual.TextStim(win, text="final bullshit. press any key to continue" , alignHoriz="center", color="#000000") # this needs to be updated
+instr3= visual.TextStim(win, text="See instr1 for issue here... Press any key to continue" , alignHoriz="center", color="#000000") # this needs to be updated
 imagestart= visual.TextStim(win, text="You will now view a series of images. Each image will appear for XXX seconds. Try to visualize yourself actually being in each scene.", color="#000000", alignHoriz="center")
 
 players = visual.SimpleImageStim(win, image='images/start.bmp')
