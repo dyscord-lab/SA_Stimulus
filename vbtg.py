@@ -102,6 +102,7 @@ p1_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,3.15), alignHor
 p3_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,-2.85), alignHoriz="left")
 
 # set instructions
+<<<<<<< HEAD
 instr1 = visual.TextStim(win, text='''Thank you for participating in our experiment!
 
 This experiment is about mental visualization.
@@ -112,6 +113,12 @@ Press any key to continue.''' , color="#000000", alignHoriz="center") # CHANGE: 
 instr2= visual.TextStim(win, text="", alignHoriz="center", color="#000000")
 instr3= visual.TextStim(win, text="final bullshit. press any key to continue" , alignHoriz="center", color="#000000") # this needs to be updated
 imagestart= visual.TextStim(win, text="You will now view a series of images. Each image will appear for XXX seconds. Try to visualize yourself actually being in each scene.", color="#000000", alignHoriz="center") # NEED TO UPDATE THE TOTAL SECONDS
+=======
+instr1 = visual.TextStim(win, text="Thank you for participating in our experiment! This experiment is about mental visualization. First, you'll be asked to answer a series of questions. This scale consists of a number of statements that describe different feelings and emotions. Read each item and then mark the appropriate answer !!! on the line below each statement !!! (Different wording here than in the IRB). Indicate to what extent you agree with each statement right now. Press any key to continue." , color="#000000", alignHoriz="center") # CHANGE: Make this bigger. See what the instructions are for this measure
+instr2= visual.TextStim(win, text="", alignHoriz="center", color="#000000")
+instr3= visual.TextStim(win, text="See instr1 for issue here... Press any key to continue" , alignHoriz="center", color="#000000") # this needs to be updated
+imagestart= visual.TextStim(win, text="You will now view a series of images. Each image will appear for XXX seconds. Try to visualize yourself actually being in each scene.", color="#000000", alignHoriz="center")
+>>>>>>> ab5bf4314e0afa22ab2475b5563ddea404fd45f4
 
 players = visual.SimpleImageStim(win, image='images/start.bmp')
 
@@ -130,6 +137,7 @@ ready_screen = visual.TextStim(win, text="Ready.....", height=1.2, color="#00000
 #==============================
 # Survey
 #==============================
+# PANAS
 q1="I feel interested"
 q2= "I feel distressed"
 q3= "I feel excited"
@@ -150,9 +158,21 @@ q17="I feel attentive"
 q18="I feel jittery"
 q19="I feel active"
 q20="I feel afraid"
+# BFNE Revised
+q21="I worry about what other people will think of me even when I know it doesn't make a difference."
+q22="It bother me when people form an unfavorable impression of me."
+q23="I am frequently afraid of other people noticing my shortcomings."
+q24="I worry about what kind of impression I make on people."
+q25="I am afraid that others will not approve of me."
+q26="I am concerned about other people's opinions of me."
+q27="When I am talking to someone, I worry about what they may be thinking of me."
+q28="I am usually owrried about what kind of impression I make."
+q29="If I know soemone is judging me, it tends to bother me."
+q30="Sometimes I think I am too concerned with what other people think of me."
+q31="I often worry that I will say or do wrong things."
 #create question library
-qlibrary = {1:q1, 2:q2, 3:q3, 4:q4, 5:q5, 6:q6, 7:q7, 8:q8, 9:q9, 10:q10, 11:q11, 12:q12, 13:q13, 14:q14, 15:q15, 16:q16, 17:q17, 18:q18, 19:q19, 20:q20}
-questions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] #list of qs
+qlibrary = {1:q1, 2:q2, 3:q3, 4:q4, 5:q5, 6:q6, 7:q7, 8:q8, 9:q9, 10:q10, 11:q11, 12:q12, 13:q13, 14:q14, 15:q15, 16:q16, 17:q17, 18:q18, 19:q19, 20:q20, 21:q21, 22:q22, 23:q23, 24:q24, 25:q25, 26:q26, 27:q27, 28:q28, 29:q29, 30:q30, 31:q31}
+questions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31] #list of qs
 
 # setting up the stimuli for eye-tracking
 piktures = 58 #numbers of pictures in folder
@@ -458,7 +478,7 @@ while (round-incRounds)<=exRounds:
     round+=1
 
 # calling stimuli and final survey
-show_images() #show images
+#show_images() #show images
 survey_outro() #show survey again #commented out for pupil testing
 goodbye.setText('''You have completed this research study. Thank you for your participation!
 
