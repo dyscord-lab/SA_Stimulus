@@ -1,18 +1,20 @@
 # stimulus
 This repo contains the stimuli for the social anxiety study.
 
-
-Important instructions for use (if "logs", "__pycache__", & "images" are not present):
-1. Unzip all folders
-2. Create folder named "logs"
-3. Create folder named "__pycache__"
+Important instructions for use (if directories `logs`, `__pycache__`, & `images`
+are not present):
+1. Unzip all directories
+2. Create directory named `logs`
+3. Create directory named `__pycache__`
 
 
 File descriptions:
-1. "__pycache__" folder - cache folder
-2. "images" folder (& images.zip) - images for CyberBall characters while tossing
-3. "logs" folder - logging data from participants
-4. "pictures" folder - stimuli without QR markers
-5. "showpics" folder - stimuli with QR markers
-6. QR_combo.R - script for unique pairs of QR markers for each stimulus photo (generates "showpics" using "pictures")
-7. vbtg.py - Intro survey, Cyberball game, stimuli presentation, outro survey
+1. `__pycache__` directory - cache directory
+2. `images` directory (& `images.zip`) - images for CyberBall characters while
+  tossing
+3. `logs` directory - logging data from participants
+4. `pictures` directory - stimuli without QR markers
+5. `showpics` directory - stimuli with QR markers
+6. `QR_combo.R` - script for unique pairs of QR markers for each stimulus photo
+  (generates directory `showpics` using `pictures`)
+7. `vbtg.py` - Intro survey, Cyberball game, stimuli presentation, outro survey
