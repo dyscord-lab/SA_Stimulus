@@ -93,7 +93,7 @@ win = visual.Window([1680,1050], monitor="testMonitor", units="deg", fullscr=use
 # Set up text #
 ################
 
-title=visual.TextStim(win,text="Mental Visualization and Attention", height=1, pos=(0,7),color="#000000", alignHoriz="center")
+title=visual.TextStim(win,text="Mental Visualization and Attention", height=1, pos=(0,10),color="#000000", alignHoriz="center", alignVert="top")
 instrText = visual.TextStim(win, text="",height=1, color="#000000", wrapWidth=25) #empty text, optional to fill
 instrKey = visual.TextStim(win, text="", height=1, color="#000000", pos=(0,-10))
 instr_p1 = visual.TextStim(win, text="",color="#000000", pos=(-6,3), height=1, alignHoriz="left")
@@ -221,7 +221,7 @@ def show_images():
         pic.draw()
         pic.draw()
         win.flip()
-        core.wait(7) #set how long images stay
+        core.wait(1) #set how long images stay
     win.flip()
 
 # ending survey
@@ -428,7 +428,7 @@ logging.log(level=logging.DATA, msg="START")
 logging.log(level=logging.DATA, msg="Intro Survey")
 
 # starting the INTRO SURVEY
-survey_intro() #commented out for pupil testing
+#survey_intro() #commented out for pupil testing
 show_instructions() #commented out for pupil testing
 ready_screen.setText('''
 
@@ -478,8 +478,8 @@ while (round-incRounds)<=exRounds:
     round+=1
 
 # calling stimuli and final survey
-#show_images() #show images
-survey_outro() #show survey again #commented out for pupil testing
+show_images() #show images
+survey_outro() #show survey again
 goodbye.setText('''You have completed this research study. Thank you for your participation!
 
 Please wait for the experimenter to come over and remove the eyetracker. The experimenter will also give you more information about the purpose of this study and give you the opportunity to ask questions.''')
