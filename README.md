@@ -1,14 +1,13 @@
 # stimulus
 This repo contains the stimuli for the social anxiety study.
 
-Important instructions for use (if directories `logs`, `__pycache__`, & `images`
-are not present):
+## Important instructions for use
+If directories `logs`, `__pycache__`, & `images` are not present:
 1. Unzip all directories
 2. Create directory named `logs`
 3. Create directory named `__pycache__`
 
-
-File descriptions:
+## File descriptions
 1. `__pycache__` directory - cache directory
 2. `images` directory (& `images.zip`) - images for CyberBall characters while
   tossing
