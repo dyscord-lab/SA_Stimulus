@@ -63,7 +63,7 @@ for (i in 1:58) {
   g <- arrangeGrob(rasterGrob(readPNG(RUname)), rasterGrob(blank), rasterGrob(readPNG(LUname)), 
                    rasterGrob(blank), rasterGrob(image), rasterGrob(blank), 
                    rasterGrob(readPNG(RDname)), rasterGrob(blank), rasterGrob(readPNG(LDname)), 
-                   ncol=3, widths = c(.5,15,.5), heights = c(.6,2,.6))
+                   ncol=3, widths = c(1,15,1), heights = c(.6,2,.6))
   setwd("../")
   mypath <- "../showpics/"
   ggsave(file = paste0(mypath, i, ".png"), g) # "image_i.png" to have unique file names
