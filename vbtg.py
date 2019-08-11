@@ -46,13 +46,14 @@ What is important is not your ball tossing performance, but that you MENTALLY VI
 '''
 
 
-# get subjID
+# create GUI for subject information tracking
 subjDlg = gui.Dlg(title="App Task")
 subjDlg.addField('Enter Subject ID:')
 subjDlg.addField('Player name:')
 subjDlg.addField("Room:")
 subjDlg.show()
 
+# move forward as long as the GUI information is valid
 if gui.OK:
     subj_id=subjDlg.data[0]
     player_name=subjDlg.data[1]
@@ -64,14 +65,12 @@ if gui.OK:
 else:
     sys.exit()
 
-
-players=[["Jesse", "Max"], #assigned through room number
+# use gender-neutral names, assigned by room number
+players=[["Jesse", "Max"],
          ["Alex", "Robin"],
          ["Kai", "Adrian"]]
-
 player1_name = players[room][0]
 player3_name = players[room][1]
-
 
 ################
 # Set up images (for players) #
@@ -304,16 +303,16 @@ def throw_ball(fromP, toP):
     global trialCnt, holder, rndCnt
     key = "%ito%i" % (fromP,toP)
 
+    # update logs
     logging.log(level=logging.DATA, msg="round %i - trial %i - throw: %s - %s" % (round, trialCnt, key, condition))
 
-    logging.log(level=logging.DATA, msg="throw variable: %s" % (throw))
-    logging.log(level=logging.DATA, msg="key variable: %s" % (key))
-
+    # convert the dict into a sorted list
     sorted_images = []
     for next_image in throw[key]:
         sorted_images.append(next_image)
     sorted_images.sort()
 
+    # create throwing animation
     for s in sorted_images:
         logging.log(level=logging.DATA, msg="current s variable: %s" % (s))
         players.setImage('images/%s/%s' % (key,s))
