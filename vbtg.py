@@ -93,14 +93,14 @@ win = visual.Window([1680,1050], monitor="testMonitor", units="deg", fullscr=use
 # Set up text #
 ################
 
-title=visual.TextStim(win,text="", height=1, pos=(0,7),color="#000000", alignHoriz="center") # CHANGE: Center this
-instrText = visual.TextStim(win, text="",height=1, color="#000000", wrapWidth=20) #empty text, optional to fill
+title=visual.TextStim(win,text="", height=1, pos=(0,7),color="#000000", alignHoriz="center")
+instrText = visual.TextStim(win, text="",height=1, color="#000000", wrapWidth=25) #empty text, optional to fill
 instrKey = visual.TextStim(win, text="", height=1, color="#000000", pos=(0,-10))
 instr_p1 = visual.TextStim(win, text="",color="#000000", pos=(-6,3), height=1, alignHoriz="left")
 instr_p2 = visual.TextStim(win, text="",color="#000000", pos=(-6, 0), height=1, alignHoriz="left")
 instr_p3 = visual.TextStim(win, text="",color="#000000", pos=(-6, -3), height=1, alignHoriz="left")
-p1_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,3.15), alignHoriz="left")
-p3_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,-2.85), alignHoriz="left")
+p1_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,3), alignHoriz="left")
+p3_tick = visual.TextStim(win,text="", color="#000000", pos=(3.5,-3), alignHoriz="left")
 
 # set instructions
 instr1 = visual.TextStim(win, text='''Thank you for participating in our experiment!
@@ -111,14 +111,14 @@ First, you'll be asked to answer a series of questions. This scale consists of a
 
 Read each item and then mark the appropriate answer. Indicate to what extent you agree with each statement right now.
 
-Press any key to continue.''' , color="#000000", alignHoriz="center") # CHANGE: Make this bigger. See what the instructions are for this measure
+Press any key to continue.''' , color="#000000", alignHoriz="center")
 instr2= visual.TextStim(win, text="", height=1, alignHoriz="center", color="#000000")
 instr3= visual.TextStim(win, text='''You'll now be asked to answer a series of questions. This scale consists of a number of statements that describe different feelings and emotions.
 
 Read each item and then mark the appropriate answer. Indicate to what extent you agree with each statement right now.
 
-Press any key to continue.''' , height=1, alignHoriz="center", color="#000000") # this needs to be updated
-imagestart= visual.TextStim(win, text="You will now view a series of images. Each image will appear for 30 seconds. Try to visualize yourself actually being in each scene.", height=1, color="#000000", alignHoriz="center") 
+Press any key to continue.''' , height=1, alignHoriz="center", color="#000000")
+imagestart= visual.TextStim(win, text="You will now view a series of images. Each image will appear for 30 seconds. Try to visualize yourself actually being in each scene.", height=1, color="#000000", alignHoriz="center")
 
 players = visual.SimpleImageStim(win, image='images/start.bmp')
 
