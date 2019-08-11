@@ -87,7 +87,7 @@ for p in paths:
 ################
 
 useFullScreen=True #Set to true for full screen
-win = visual.Window([1680,1050], monitor="testMonitor", units="deg", fullscr=useFullScreen, allowGUI=False, color="#FFFFFF")
+win = visual.Window([2560, 1440], monitor="testMonitor", units="deg", fullscr=useFullScreen, allowGUI=False, color="#FFFFFF") # Size for personal Macs (for testing): [1680, 1050], size for lab Mac (for collection): [2560, 1440]
 
 ################
 # Set up text #
@@ -214,10 +214,10 @@ def show_images():
     win.flip()
     core.wait(9)
     event.clearEvents()
-    for k in pix:    # need to resize images HERE
+    for k in pix:
         pic = visual.ImageStim(win, image='showpics/%i.png' % (k+1))
         print(k+1)
-        pic.size*=(0.6, 0.6)
+        pic.size*=(0.7, 0.7) # resize images here
         pic.draw()
         pic.draw()
         win.flip()
@@ -428,7 +428,7 @@ logging.log(level=logging.DATA, msg="START")
 logging.log(level=logging.DATA, msg="Intro Survey")
 
 # starting the INTRO SURVEY
-#survey_intro() #commented out for pupil testing
+survey_intro() #commented out for pupil testing
 show_instructions() #commented out for pupil testing
 ready_screen.setText('''
 
@@ -464,7 +464,7 @@ title.setText('')
 fixation.setText("Please wait...")
 fixation.draw()
 win.flip()
-core.wait(2)
+core.wait(1)
 
 while round<=incRounds:
     play_round()
