@@ -16,6 +16,7 @@ import os
 import time
 from random import shuffle
 
+
 #################
 #  PARAMETERS #
 #################
@@ -24,7 +25,6 @@ maxTime=25 #length of time that player is allowed to hold ball before round ends
 maxTrials=10 #number of throws allowed per round
 incRounds=1 #number of inclusive rounds
 exRounds=1 #number of exclusive rounds
-
 #set variables below vvv
 holder=1
 round=1
@@ -358,28 +358,37 @@ def select_throw(): #runs if subject has ball
         logging.log(level=logging.DATA,msg="PLAYER HAS BALL")
         got_ball_time = trialClock.getTime()
 
+        # loop to wait for the participant to choose
         choice=[]
-        while len(choice)==0 or choice [0] not in ('2','3'): #waiting for subject to make choice
+        while len(choice)==0 or choice [0] not in ('2','3'):
             core.wait(0.01)
             if trialCnt > maxTrials or trialClock.getTime() > maxTime: #end round if player takes too long/ there have been too many tosses
                 return
             choice = event.getKeys(keyList=['2','3'])
+
+        # once the participant chooses, log it
         if choice[0]=='2':
             throwTo=1
         elif choice[0]=='3':
             throwTo=3
 
-        logging.log(level=logging.DATA,msg="PLAYER THROWS TO %i - RT %0.4f" % (throwTo, trialClock.getTime()-got_ball_time))
+        # log the participant's throw
+        logging.log(level=logging.DATA,
+                    msg="PLAYER THROWS TO %i - RT %0.4f" % (throwTo, trialClock.getTime()-got_ball_time))
     else:
         core.wait(random.randint(500,2000)/1000) #range for simulation to "decide" where to throw
 
-        if round>incRounds and rndCnt>7: #start excluding player after 7 throws in exclusion round
+        # in the exclusionary condition, make it less likely that the participant will get the ball after 7 rounds
+        if round>incRounds and rndCnt>7:
             condition="UBALL"
-            ft=0.3
-        else:
-            ft=0.0
+            ft = 0.3
 
-        throwChoice = random.random() - ft #change equation so subject is less likely to recieve ball
+        # if it's not the exclusionary condition or if it hasn't reached the right number of rounds, don't alter probability
+        else:
+            ft = 0.0
+
+        # change equation so subject is less likely to recieve ball
+        throwChoice = random.random() - ft
         if throwChoice < 0.5:
             if holder==1:
                 throwTo=3
@@ -388,17 +397,27 @@ def select_throw(): #runs if subject has ball
         else:
             throwTo=2
 
+    # if it's the last trial or if maximum time has elapsed, log and leave
     if trialCnt > maxTrials or trialClock.getTime() > maxTime:
-        logging.log(level=logging.DATA,msg="RETURN with %i Trial Count and %i Trial Clock" % (trialCnt, trialClock.getTime()))
+        logging.log(level=logging.DATA,
+                    msg="RETURN with %i Trial Count and %i Trial Clock" % (trialCnt, trialClock.getTime()))
         return
+
+    # if we haven't reached the maximum round count or the maximum time, keep throwing
     else:
         throw_ball(holder,throwTo)
 
 # counting # of rounds
 def play_round():
+
+    # create roundcount variable
     global rndCnt
     rndCnt=0
+
+    # log current round
     logging.log(level=logging.DATA, msg="Displaying Round %i label" % round)
+
+    # update text and draw the current round
     round_fix.setText("Round %i" % round)
     round_fix.draw()
     win.flip()
@@ -478,8 +497,8 @@ while (round-incRounds)<=exRounds:
     round+=1
 
 # calling stimuli and final survey
-show_images() #show images
-survey_outro() #show survey again
+#show_images() #show images
+survey_outro() #show survey again #commented out for pupil testing
 goodbye.setText('''You have completed this research study. Thank you for your participation!
 
 Please wait for the experimenter to come over and remove the eyetracker. The experimenter will also give you more information about the purpose of this study and give you the opportunity to ask questions.''')
