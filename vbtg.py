@@ -16,7 +16,6 @@ import os
 import time
 from random import shuffle
 
-
 #################
 #  PARAMETERS #
 #################
@@ -25,6 +24,7 @@ maxTime=25 #length of time that player is allowed to hold ball before round ends
 maxTrials=10 #number of throws allowed per round
 incRounds=1 #number of inclusive rounds
 exRounds=1 #number of exclusive rounds
+
 #set variables below vvv
 holder=1
 round=1
@@ -93,7 +93,7 @@ win = visual.Window([1680,1050], monitor="testMonitor", units="deg", fullscr=use
 # Set up text #
 ################
 
-title=visual.TextStim(win,text="", height=1, pos=(0,7),color="#000000", alignHoriz="center")
+title=visual.TextStim(win,text="Mental Visualization and Attention", height=1, pos=(0,7),color="#000000", alignHoriz="center")
 instrText = visual.TextStim(win, text="",height=1, color="#000000", wrapWidth=25) #empty text, optional to fill
 instrKey = visual.TextStim(win, text="", height=1, color="#000000", pos=(0,-10))
 instr_p1 = visual.TextStim(win, text="",color="#000000", pos=(-6,3), height=1, alignHoriz="left")
