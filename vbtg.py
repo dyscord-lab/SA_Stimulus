@@ -7,7 +7,7 @@
 # original Matlab implementation by Josh Carp
 # PsychoPy Python version by Matt O'Donnell (mbod@asc.upenn.edu)
 
-# Editted for "Mental Attention and Visualization" Exp 1 by: Nomi, Alex, and Megan
+# Edited for "Mental Attention and Visualization" Exp 1 by: Nomi, Alex, and Megan
 
 from psychopy import visual, core, logging, event, data, gui
 import sys
@@ -489,12 +489,14 @@ fixation.draw()
 win.flip()
 core.wait(1)
 
-
+# play all inclusive rounds first
 while round<=incRounds:
     play_round()
     holder=1
     trialCnt=0
     round+=1
+
+# play all exclusive rounds next
 while (round-incRounds)<=exRounds:
     play_round()
     holder=1
