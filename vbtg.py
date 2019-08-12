@@ -7,6 +7,8 @@
 # original Matlab implementation by Josh Carp
 # PsychoPy Python version by Matt O'Donnell (mbod@asc.upenn.edu)
 
+# Editted for "Mental Attention and Visualization" Exp 1 by: Nomi, Alex, and Megan
+
 from psychopy import visual, core, logging, event, data, gui
 import sys
 import random
@@ -428,8 +430,8 @@ logging.log(level=logging.DATA, msg="START")
 logging.log(level=logging.DATA, msg="Intro Survey")
 
 # starting the INTRO SURVEY
-survey_intro() #commented out for pupil testing
-show_instructions() #commented out for pupil testing
+#survey_intro() #commented out for pupil testing
+#show_instructions() #commented out for pupil testing
 ready_screen.setText('''
 
 Press Space to start''')
@@ -466,16 +468,17 @@ fixation.draw()
 win.flip()
 core.wait(1)
 
-while round<=incRounds:
-    play_round()
-    holder=1
-    trialCnt=0
-    round+=1
-while (round-incRounds)<=exRounds:
-    play_round()
-    holder=1
-    trialCnt=0
-    round+=1
+
+#while round<=incRounds:
+#    play_round()
+#    holder=1
+#    trialCnt=0
+#    round+=1
+#while (round-incRounds)<=exRounds:
+#    play_round()
+#    holder=1
+#    trialCnt=0
+#    round+=1
 
 # calling stimuli and final survey
 show_images() #show images
