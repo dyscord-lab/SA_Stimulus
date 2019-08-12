@@ -25,9 +25,10 @@ from random import shuffle
 
 maxTime=25 #length of time that player is allowed to hold ball before round ends
 maxTrials=10 #number of throws allowed per round
-incRounds=1 #number of inclusive rounds
-exRounds=1 #number of exclusive rounds
-#set variables below vvv
+incRounds=4 #number of inclusive rounds
+exRounds=8 #number of exclusive rounds
+
+#set variables below
 holder=1
 round=1
 trialCnt=0
@@ -53,7 +54,8 @@ What is important is not your ball tossing performance, but that you MENTALLY VI
 subjDlg = gui.Dlg(title="App Task")
 subjDlg.addField('Enter Subject ID:')
 subjDlg.addField('Player name:')
-subjDlg.addField("Room:")
+subjDlg.addField('Room:')
+subjDlg.addField('Experiment number:')
 subjDlg.show()
 
 # move forward as long as the GUI information is valid
@@ -61,6 +63,7 @@ if gui.OK:
     subj_id=subjDlg.data[0]
     player_name=subjDlg.data[1]
     round_number=subjDlg.data[2] #add round input
+    exp_cond=int(subjDlg.data[3]) #condition type: 0 (exclusion), 1 (inclusion)
     try:
         room = int(subjDlg.data[2])-1
     except:
@@ -224,7 +227,7 @@ def show_images():
         pic.draw()
         pic.draw()
         win.flip()
-        core.wait(1) #set how long images stay
+        core.wait(30) #set how long images stay
     win.flip()
 
 # ending survey
@@ -379,9 +382,9 @@ def select_throw(): #runs if subject has ball
     else:
         core.wait(random.randint(500,2000)/1000) #range for simulation to "decide" where to throw
 
-        # in the exclusionary condition, make it less likely that the participant will get the ball after 7 rounds
-        if round>incRounds and rndCnt>7:
-            condition="UBALL" # does this mean exclusive condition???
+        # in the exclusionary condition, make it less likely that the participant will get the ball after # of inclusive rounds is exceeded
+        if round>incRounds and exp_cond<1:
+            condition="UBALL" # exclusive condition
             ft = 0.3
 
         # if it's not the exclusionary condition or if it hasn't reached the right number of rounds, don't alter probability
@@ -448,7 +451,7 @@ logging.log(level=logging.DATA, msg="START")
 logging.log(level=logging.DATA, msg="Intro Survey")
 
 # starting the INTRO SURVEY
-survey_intro() #commented out for pupil testing
+# survey_intro() #commented out for pupil testing
 #show_instructions() #commented out for pupil testing
 ready_screen.setText('''
 
@@ -487,20 +490,20 @@ win.flip()
 core.wait(1)
 
 
-#while round<=incRounds:
-#    play_round()
-#    holder=1
-#    trialCnt=0
-#    round+=1
-#while (round-incRounds)<=exRounds:
-#    play_round()
-#    holder=1
-#    trialCnt=0
-#    round+=1
+while round<=incRounds:
+    play_round()
+    holder=1
+    trialCnt=0
+    round+=1
+while (round-incRounds)<=exRounds:
+    play_round()
+    holder=1
+    trialCnt=0
+    round+=1
 
 # calling stimuli and final survey
 show_images() #show images
-#survey_outro() #show survey again
+survey_outro() #show survey again
 goodbye.setText('''You have completed this research study. Thank you for your participation!
 
 Please wait for the experimenter to come over and remove the eyetracker. The experimenter will also give you more information about the purpose of this study and give you the opportunity to ask questions.''')
