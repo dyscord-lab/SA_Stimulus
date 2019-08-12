@@ -7,7 +7,7 @@
 # original Matlab implementation by Josh Carp
 # PsychoPy Python version by Matt O'Donnell (mbod@asc.upenn.edu)
 
-# Editted for "Mental Attention and Visualization" Exp 1 by: Nomi, Alex, and Megan
+# Edited for "Mental Attention and Visualization" Exp 1 by: Nomi, Alex, and Megan
 
 from psychopy import visual, core, logging, event, data, gui
 import sys
@@ -25,8 +25,8 @@ from random import shuffle
 
 maxTime=25 #length of time that player is allowed to hold ball before round ends
 maxTrials=10 #number of throws allowed per round
-incRounds=4 #number of inclusive rounds
-exRounds=8 #number of exclusive rounds
+incRounds=3 #number of inclusive rounds
+exRounds=9 #number of exclusive rounds
 
 #set variables below
 holder=1
@@ -55,7 +55,7 @@ subjDlg = gui.Dlg(title="App Task")
 subjDlg.addField('Enter Subject ID:')
 subjDlg.addField('Player name:')
 subjDlg.addField('Room:')
-subjDlg.addField('Experiment number:')
+subjDlg.addField('Experiment: ')
 subjDlg.show()
 
 # move forward as long as the GUI information is valid
@@ -382,7 +382,7 @@ def select_throw(): #runs if subject has ball
         core.wait(random.randint(500,2000)/1000) #range for simulation to "decide" where to throw
 
         # in the exclusionary condition, make it less likely that the participant will get the ball after # of inclusive rounds is exceeded
-        if round>incRounds and exp_cond<1:
+        if round>incRounds and exp_cond==0:
             condition="UBALL" # exclusive condition
             ft = 0.3
 
@@ -487,12 +487,18 @@ fixation.draw()
 win.flip()
 core.wait(1)
 
+<<<<<<< HEAD
 # counting inclusive rounds, starting new round, and reseting throws & ball holder each advance
+=======
+# play all inclusive rounds first
+>>>>>>> d07dd2dd82782a6beb370c222746b88425c488fe
 while round<=incRounds:
     play_round()
     holder=1
     trialCnt=0
     round+=1
+
+# play all exclusive rounds next
 while (round-incRounds)<=exRounds:
     play_round()
     holder=1
