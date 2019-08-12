@@ -191,7 +191,7 @@ def survey_intro():
         core.quit()
     for i in questions:
         myRatingScale = visual.RatingScale(win, choices=['      1:\nvery slightly/\nnot at all', '    2:\na little', '       3:\nmoderately', '        4:\nquite a bit', '      5:\nextremely'], stretch=2.4, textColor='Black', lineColor='Black', showValue=False, acceptText='continue')
-        myItem = visual.TextStim(win, text=qlibrary[i], height=.12, units='norm', color="#000000")
+        myItem = visual.TextStim(win, text=qlibrary[i], height=.07, units='norm', color="#000000")
         event.clearEvents()
         while myRatingScale.noResponse:  # show & update until a response has been made
             myItem.draw()
@@ -237,7 +237,7 @@ def survey_outro():
         core.quit()
     for i in questions:
         myRatingScale = visual.RatingScale(win, choices=['      1:\nvery slightly/\nnot at all', '    2:\na little', '       3:\nmoderately', '        4:\nquite a bit', '      5:\nextremely'], stretch=2.4, textColor='Black', lineColor='Black', showValue=False, acceptText='continue')
-        myItem = visual.TextStim(win, text=qlibrary[i], height=.12, units='norm', color="#000000")
+        myItem = visual.TextStim(win, text=qlibrary[i], height=.07, units='norm', color="#000000")
         event.clearEvents()
         while myRatingScale.noResponse:  # show & update until a response has been made
             myItem.draw()
@@ -381,7 +381,7 @@ def select_throw(): #runs if subject has ball
 
         # in the exclusionary condition, make it less likely that the participant will get the ball after 7 rounds
         if round>incRounds and rndCnt>7:
-            condition="UBALL"
+            condition="UBALL" # does this mean exclusive condition???
             ft = 0.3
 
         # if it's not the exclusionary condition or if it hasn't reached the right number of rounds, don't alter probability
@@ -500,7 +500,7 @@ core.wait(1)
 
 # calling stimuli and final survey
 show_images() #show images
-#survey_outro() #show survey again #commented out for pupil testing
+#survey_outro() #show survey again
 goodbye.setText('''You have completed this research study. Thank you for your participation!
 
 Please wait for the experimenter to come over and remove the eyetracker. The experimenter will also give you more information about the purpose of this study and give you the opportunity to ask questions.''')
