@@ -86,7 +86,6 @@ throw={}
 for p in paths:
     throw[p]=[f for f in os.listdir('images/%s' % p) if f.endswith('.bmp')]
 
-
 ################
 # Set up window #
 ################
@@ -349,7 +348,7 @@ def throw_ball(fromP, toP):
     rndCnt+=1
 
     # set the new holder to be the person to whom it was thrown
-    holder=toP # not the issue with images
+    holder=toP 
     logging.flush()
     select_throw()
 
@@ -441,7 +440,6 @@ def play_round():
     win.flip()
     core.wait(5)
 
-
 # ================================
 # setup logging #
 # ================================
@@ -451,8 +449,8 @@ logging.log(level=logging.DATA, msg="START")
 logging.log(level=logging.DATA, msg="Intro Survey")
 
 # starting the INTRO SURVEY
-# survey_intro() #commented out for pupil testing
-#show_instructions() #commented out for pupil testing
+survey_intro()
+show_instructions()
 ready_screen.setText('''
 
 Press Space to start''')
@@ -489,7 +487,7 @@ fixation.draw()
 win.flip()
 core.wait(1)
 
-
+# counting inclusive rounds, starting new round, and reseting throws & ball holder each advance
 while round<=incRounds:
     play_round()
     holder=1
