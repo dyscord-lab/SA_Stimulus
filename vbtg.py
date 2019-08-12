@@ -218,12 +218,13 @@ def show_images():
     event.clearEvents()
     for k in pix:
         pic = visual.ImageStim(win, image='showpics/%i.png' % (k+1))
+        logging.log(level=logging.DATA, msg="PICTURE: %i.png" % (k+1)) # logging picture order ???
         print(k+1)
         pic.size*=(0.7, 0.7) # resize images here
         pic.draw()
         pic.draw()
         win.flip()
-        core.wait(5) #set how long images stay
+        core.wait(1) #set how long images stay
     win.flip()
 
 # ending survey
@@ -253,7 +254,6 @@ def show_instructions():
     instrText.setText(instructions1)
     instrText.setAutoDraw(True)
     win.flip()
-    #core.wait(20)
     instrKey.setText('''
 
     PRESS 2 to continue''')
@@ -262,7 +262,6 @@ def show_instructions():
     event.waitKeys(keyList=['2'])
     instrText.setText(instructions2)
     win.flip()
-    #core.wait(20)
     instrKey.setText('''
 
     PRESS 3 to begin''')
@@ -449,7 +448,7 @@ logging.log(level=logging.DATA, msg="START")
 logging.log(level=logging.DATA, msg="Intro Survey")
 
 # starting the INTRO SURVEY
-#survey_intro() #commented out for pupil testing
+survey_intro() #commented out for pupil testing
 #show_instructions() #commented out for pupil testing
 ready_screen.setText('''
 
@@ -500,8 +499,8 @@ core.wait(1)
 #    round+=1
 
 # calling stimuli and final survey
-#show_images() #show images
-survey_outro() #show survey again #commented out for pupil testing
+show_images() #show images
+#survey_outro() #show survey again #commented out for pupil testing
 goodbye.setText('''You have completed this research study. Thank you for your participation!
 
 Please wait for the experimenter to come over and remove the eyetracker. The experimenter will also give you more information about the purpose of this study and give you the opportunity to ask questions.''')
