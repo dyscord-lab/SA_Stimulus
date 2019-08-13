@@ -23,10 +23,10 @@ from random import shuffle
 #  PARAMETERS #
 #################
 
-maxTime=25 #length of time that player is allowed to hold ball before round ends
-maxTrials=10 #number of throws allowed per round
-incRounds=3 #number of inclusive rounds
-exRounds=9 #number of exclusive rounds
+maxTime=75 #length of time that player is allowed to hold ball before round ends
+maxTrials=30 #number of throws allowed per round
+incRounds=1 #number of inclusive rounds
+exRounds=3 #number of exclusive rounds
 
 #set variables below
 holder=1
