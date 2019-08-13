@@ -506,7 +506,7 @@ show_images() #show images
 survey_outro() #show survey again
 goodbye.setText('''You have completed this research study. Thank you for your participation!
 
-Please wait for the experimenter to come over and remove the eyetracker. The experimenter will also give you more information about the purpose of this study and give you the opportunity to ask questions.''')
+Please call the experimenter over and they will help you remove the eyetracker. The experimenter will also give you more information about the purpose of this study and give you the opportunity to ask questions.''')
 goodbye.draw()
 win.flip()
 core.wait(7.5)
