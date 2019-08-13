@@ -348,7 +348,7 @@ def throw_ball(fromP, toP):
     rndCnt+=1
 
     # set the new holder to be the person to whom it was thrown
-    holder=toP 
+    holder=toP
     logging.flush()
     select_throw()
 
@@ -487,11 +487,7 @@ fixation.draw()
 win.flip()
 core.wait(1)
 
-<<<<<<< HEAD
-# counting inclusive rounds, starting new round, and reseting throws & ball holder each advance
-=======
 # play all inclusive rounds first
->>>>>>> d07dd2dd82782a6beb370c222746b88425c488fe
 while round<=incRounds:
     play_round()
     holder=1
