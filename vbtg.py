@@ -1,4 +1,3 @@
-
 # Virtual Ball Toss Game
 # version of 'Cyberball' - https://www.ncbi.nlm.nih.gov/pubmed/16817529
 # for PsychoPy (using Python2.7)
@@ -24,9 +23,9 @@ from random import shuffle
 #################
 
 maxTime=75 #length of time that player is allowed to hold ball before round ends
-maxTrials=30 #number of throws allowed per round
-incRounds=1 #number of inclusive rounds
-exRounds=3 #number of exclusive rounds
+maxTrials=10 #number of throws allowed per round - 30
+incRounds=1 #number of inclusive rounds - 1
+exRounds=1 #number of exclusive rounds - 3
 
 #set variables below
 holder=1
@@ -39,7 +38,7 @@ condition="FBALL"
 instructions1 = '''
 For the next part of the experiment, we will test the effects of practicing mental visualization on task performance, so we need you to practice your mental visualization skills. We have found that the best way to do this is to have you play an online ball tossing game with other participants who are logged on to the system at the same time.
 
-In a few moments, you will be playing a ball-tossing game with other students over our network. Several universities in the state of Connecticut are taking part in a collaborative investigation of the effects of mental visualization on task performance, with college students participating at several different universities around the state of Connecticut.
+In a few moments, you will be playing a ball-tossing game with other participants over our network. 
 '''
 
 # create second set of instructions for ball-tossing
@@ -226,7 +225,7 @@ def show_images():
         pic.draw()
         pic.draw()
         win.flip()
-        core.wait(30) #set how long images stay
+        core.wait(1) #set how long images stay
     win.flip()
 
 # ending survey
