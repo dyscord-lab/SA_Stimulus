@@ -22,10 +22,10 @@ from random import shuffle
 #  PARAMETERS #
 #################
 
-maxTime=75 #length of time that player is allowed to hold ball before round ends
-maxTrials=10 #number of throws allowed per round - 30
-incRounds=1 #number of inclusive rounds - 1
-exRounds=1 #number of exclusive rounds - 3
+maxTime=75 #length of time that player is allowed to hold ball before round ends (should be 75)
+maxTrials=1 #number of throws allowed per round (should be 30)
+incRounds=0 #number of inclusive rounds - (should be 1)
+exRounds=0 #number of exclusive rounds - (should be 3)
 
 #set variables below
 holder=1
@@ -121,7 +121,7 @@ instr3= visual.TextStim(win, text='''You'll now be asked to answer a series of q
 Read each item and then mark the appropriate answer. Indicate to what extent you agree with each statement right now.
 
 Press any key to continue.''' , height=1, alignHoriz="center", color="#000000")
-imagestart= visual.TextStim(win, text="You will now view a series of images. Each image will appear for 30 seconds. Try to visualize yourself actually being in each scene.", height=1, color="#000000", alignHoriz="center")
+imagestart= visual.TextStim(win, text="You will now view a series of images. Each image will appear for 20 seconds. Try to visualize yourself actually being in each scene.", height=1, color="#000000", alignHoriz="center")
 
 players = visual.SimpleImageStim(win, image='images/start.bmp')
 
@@ -178,7 +178,7 @@ qlibrary = {1:q1, 2:q2, 3:q3, 4:q4, 5:q5, 6:q6, 7:q7, 8:q8, 9:q9, 10:q10, 11:q11
 questions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31] #list of qs
 
 # setting up the stimuli for eye-tracking
-piktures = 58 #numbers of pictures in folder
+piktures = 57 #numbers of pictures in folder
 pix = list(range(0, piktures))
 shuffle(pix) #randomized order of pictures
 
@@ -221,11 +221,11 @@ def show_images():
         pic = visual.ImageStim(win, image='showpics/%i.png' % (k+1))
         logging.log(level=logging.DATA, msg="PICTURE: %i.png" % (k+1)) # logging picture order ???
         print(k+1)
-        pic.size*=(0.7, 0.7) # resize images here
+        pic.size*=(0.7, 0.7) # resize images here (good at 0.7, 0.7 for lab mac)
         pic.draw()
         pic.draw()
         win.flip()
-        core.wait(1) #set how long images stay
+        core.wait(1) #set how long images stay (should be 20)
     win.flip()
 
 # ending survey
@@ -447,14 +447,12 @@ logging.log(level=logging.DATA, msg="START")
 
 logging.log(level=logging.DATA, msg="Intro Survey")
 
-# starting the INTRO SURVEY
-survey_intro()
-show_instructions()
-ready_screen.setText('''
-
-Press Space to start''')
-ready_screen.draw()
-win.flip()
+#starting the INTRO SURVEY
+#survey_intro()
+#show_instructions()
+#ready_screen.setText('''Press Space to start''')
+#ready_screen.draw()
+#win.flip()
 event.waitKeys(keyList=['space'])
 
 #################
@@ -494,7 +492,7 @@ while round<=incRounds:
     round+=1
 
 # play all exclusive rounds next
-while (round-incRounds)<=exRounds:
+while (round-incRounds)<=exRounds: 
     play_round()
     holder=1
     trialCnt=0
@@ -505,7 +503,7 @@ show_images() #show images
 survey_outro() #show survey again
 goodbye.setText('''You have completed this research study. Thank you for your participation!
 
-Please call the experimenter over and they will help you remove the eyetracker. The experimenter will also give you more information about the purpose of this study and give you the opportunity to ask questions.''')
+Please remove the eyetracker and get the experimenter. The experimenter will then give you more information about the purpose of this study and give you the opportunity to ask questions.''')
 goodbye.draw()
 win.flip()
 core.wait(7.5)

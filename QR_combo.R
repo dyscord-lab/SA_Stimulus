@@ -21,7 +21,7 @@ stimuli$rightup <- rep("marker_01.png",nrow(stimuli))
 stimuli$leftup <- rep("marker_02.png",nrow(stimuli))
 stimuli$leftup[30:57] <- "marker_03.png"
 
-# filling lower right corner - further  distinguishing with markers 4 & 5
+# fill  ing lower right corner - further  distinguishing with markers 4 & 5
 stimuli$rightdown <- rep("marker_04.png", nrow(stimuli))
 stimuli$rightdown[15:29] <- "marker_05.png"
 stimuli$rightdown[44:57] <- "marker_05.png"
