@@ -178,7 +178,7 @@ qlibrary = {1:q1, 2:q2, 3:q3, 4:q4, 5:q5, 6:q6, 7:q7, 8:q8, 9:q9, 10:q10, 11:q11
 questions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31] #list of qs
 
 # setting up the stimuli for eye-tracking
-piktures = 57 #numbers of pictures in folder
+piktures = 56 #numbers of pictures in folder
 pix = list(range(0, piktures))
 shuffle(pix) #randomized order of pictures
 

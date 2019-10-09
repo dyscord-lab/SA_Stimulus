@@ -19,19 +19,19 @@ stimuli$rightup <- rep("marker_01.png",nrow(stimuli))
 
 # filling top left corner half with marker 2 and half with 3
 stimuli$leftup <- rep("marker_02.png",nrow(stimuli))
-stimuli$leftup[30:57] <- "marker_03.png"
+stimuli$leftup[30:56] <- "marker_03.png"
 
 # fill  ing lower right corner - further  distinguishing with markers 4 & 5
 stimuli$rightdown <- rep("marker_04.png", nrow(stimuli))
 stimuli$rightdown[15:29] <- "marker_05.png"
-stimuli$rightdown[44:57] <- "marker_05.png"
+stimuli$rightdown[44:56] <- "marker_05.png"
 
 # filling lower left corner by cycling through unused markers
 stimuli$leftdown <- rep("marker_06.png", nrow(stimuli))
 stimuli$leftdown[1:14] <- qr_list[7:20]
 stimuli$leftdown[15:29] <- qr_list[7:21]
 stimuli$leftdown[30:43] <- qr_list[7:20]
-stimuli$leftdown[44:57] <- qr_list[7:20]
+stimuli$leftdown[44:56] <- qr_list[7:19]
 
 #===========================================================================
 # creating stimuli using data frame
@@ -46,7 +46,7 @@ blank <- readPNG('../blank.png')
 
 setwd("../stimuli")
 # loop for image generation
-for (i in 1:57) {
+for (i in 1:56) {
 
   # identifying NAMES of unique QR markers
   RUname <- stimuli[i, 2]
