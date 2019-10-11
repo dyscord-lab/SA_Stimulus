@@ -506,5 +506,5 @@ goodbye.setText('''You have completed this research study. Thank you for your pa
 Please remove the eyetracker and get the experimenter. The experimenter will then give you more information about the purpose of this study and give you the opportunity to ask questions.''')
 goodbye.draw()
 win.flip()
-core.wait(7.5)
+core.wait(15)
 logging.log(level=logging.DATA, msg="END")
