@@ -23,9 +23,9 @@ from random import shuffle
 #################
 
 maxTime=75 #length of time that player is allowed to hold ball before round ends (should be 75)
-maxTrials=0 #number of throws allowed per round (should be 30)
-incRounds=0 #number of inclusive rounds - (should be 1)
-exRounds=0 #number of exclusive rounds - (should be 3)
+maxTrials=30 #number of throws allowed per round (should be 30)
+incRounds=1 #number of inclusive rounds - (should be 1)
+exRounds=3 #number of exclusive rounds - (should be 3)
 
 #set variables below
 holder=1
@@ -458,12 +458,12 @@ logging.log(level=logging.DATA, msg="START")
 logging.log(level=logging.DATA, msg="Intro Survey")
 
 #starting the INTRO SURVEY
-#survey_intro()
-#show_instructions()
-#ready_screen.setText('''Press Space to start''')
-#ready_screen.draw()
-#win.flip()
-#event.waitKeys(keyList=['space'])
+survey_intro()
+show_instructions()
+ready_screen.setText('''Press Space to start''')
+ready_screen.draw()
+win.flip()
+event.waitKeys(keyList=['space'])
 
 #################
 # Trigger scanner # WHAT DOES THIS DO ??
