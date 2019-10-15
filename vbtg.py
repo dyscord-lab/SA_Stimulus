@@ -23,9 +23,9 @@ from random import shuffle
 #################
 
 maxTime=75 #length of time that player is allowed to hold ball before round ends (should be 75)
-maxTrials=30 #number of throws allowed per round (should be 30)
-incRounds=1 #number of inclusive rounds - (should be 1)
-exRounds=3 #number of exclusive rounds - (should be 3)
+maxTrials=0 #number of throws allowed per round (should be 30)
+incRounds=0 #number of inclusive rounds - (should be 1)
+exRounds=0 #number of exclusive rounds - (should be 3)
 
 #set variables below
 holder=1
@@ -226,6 +226,16 @@ def show_images():
         pic.draw()
         win.flip()
         core.wait(20) #set how long images stay (should be 20)
+        
+        # show the blank image between trials
+        reset_image =  visual.ImageStim(win, image= 'blank/blank.png')
+        logging.log(level=logging.DATA, msg="PICTURE: reset_image") # logging reset img     
+        print(reset_image)
+        reset_image.size*=(0.7, 0.7) # resize images here (good at 0.7, 0.7 for lab mac)
+        reset_image.draw()
+        reset_image.draw()
+        win.flip()
+        core.wait(1) # set how long reset image would stay (in sec)
     win.flip()
 
 # ending survey
@@ -448,12 +458,12 @@ logging.log(level=logging.DATA, msg="START")
 logging.log(level=logging.DATA, msg="Intro Survey")
 
 #starting the INTRO SURVEY
-survey_intro()
-show_instructions()
-ready_screen.setText('''Press Space to start''')
-ready_screen.draw()
-win.flip()
-event.waitKeys(keyList=['space'])
+#survey_intro()
+#show_instructions()
+#ready_screen.setText('''Press Space to start''')
+#ready_screen.draw()
+#win.flip()
+#event.waitKeys(keyList=['space'])
 
 #################
 # Trigger scanner # WHAT DOES THIS DO ??
