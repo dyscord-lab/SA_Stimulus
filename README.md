@@ -23,7 +23,8 @@ If directories `logs`, `__pycache__`, & `images` are not present:
 
 ## To do
 
-1. Update the Cyberball images
+1. Update the Cyberball images (low priority)
+  - If could make them somewhat larger (maybe 1.5x?), that would be great.
 1. Export world timestamp at the beginning of the log
 1. Start the experiment with showing a BRAND NEW QR code on the screen and
    making the participant press spacebar to make it go away. Show `reset_image`
