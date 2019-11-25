@@ -44,13 +44,19 @@ filtered <- arrange_val[!(arrange_val$desc == "BurnVictim" | arrange_val$desc ==
 # check that it worked
 unique(filtered$desc)
 
-# cutting top 1% of valence photos to then visually approve of top pairs (4 pairs; .67%)
-top_val =  filtered %>%
+# cutting top 5% of valence photos to then visually approve of top pairs (4 pairs; .67%)
+low_val =  filtered %>%
   arrange(valmn) %>%
-  slice(1:60)
+  slice(61:120)
 
-# cutting bottom 1% of valence photos to then visually approve of top pairs (4 pairs; .67%)
-bottom_val =  filtered %>%
+  # take avg valence
+  mean(low_val$valmn)
+
+# cutting bottom 5-10% of valence photos to then visually approve of top pairs (4 pairs; .67%)
+high_val =  filtered %>%
   arrange(desc(valmn)) %>%
   slice(1:60)
+
+  # take avg valence
+  mean(high_val$valmn)
   
