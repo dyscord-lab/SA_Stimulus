@@ -9,6 +9,8 @@
 # Edited for "Mental Attention and Visualization" Phase 2
 
 from psychopy import visual, core, logging, event, data, gui
+from datetime import datetime 
+import time 
 import sys
 import random
 import csv
@@ -23,8 +25,8 @@ from random import shuffle
 
 maxTime=75 #length of time that player is allowed to hold ball before round ends (should be 75)
 maxTrials=30 #number of throws allowed per round (should be 30)
-incRounds=0 #number of inclusive rounds - (should be 1)
-exRounds=0 #number of exclusive rounds - (should be 3)
+incRounds=1 #number of inclusive rounds - (should be 1)
+exRounds=3 #number of exclusive rounds - (should be 3)
 
 #set variables below
 holder=1
@@ -37,7 +39,7 @@ condition="FBALL"
 instructions1 = '''
 For the next part of the experiment, we will test the effects of practicing mental visualization on task performance, so we need you to practice your mental visualization skills. We have found that the best way to do this is to have you play an online ball tossing game with other participants who are logged on to the system at the same time.
 
-In a few moments, you will be playing a ball-tossing game with other participants over our network. 
+In a few moments, you will be playing a ball-tossing game with other participants over our network.
 '''
 
 # create second set of instructions for ball-tossing
@@ -218,28 +220,35 @@ def show_images():
     event.clearEvents()
     for k in pix:
         pic = visual.ImageStim(win, image='showpics/%i.png' % (k+1))
-        logging.log(level=logging.DATA, msg="PICTURE: %i.png" % (k+1)) # logging picture order
+        #logging.log(level=logging.DATA, msg="PICTURE: %i.png" % (k+1)) # logging picture order and time
         print(k+1)
         pic.size*=(0.7, 0.7) # resize images here (good at 0.7, 0.7 for lab mac)
         pic.draw()
         pic.draw()
-        win.flip()
+        win.flip() # flips to show the image
+        now = datetime.now() # grab system time
+        current_time = now.strftime("%H:%M:%S:%f") # convert system time to string format
+        logging.log(level=logging.DATA, msg="PICTURE: %i.png, TIME: %s" % (k+1, current_time)) # logging stimulus imgage # and time shown
         core.wait(20) #set how long images stay (should be 20)
-        
+
         # show the fixation image and instructions between trials
         fixate_image =  visual.ImageStim(win, image= 'blank/fixation_cross.png')
-        logging.log(level=logging.DATA, msg="PICTURE: fixate_image") # logging fixate imgage
         print(fixate_image)
         fixate_image.size*=(0.2, 0.2) # resize image here
         fixate_image.draw()
         fixate_image.draw()
+        now = datetime.now() # grab system time
+        current_time = now.strftime("%H:%M:%S:%f") # convert system time to string format
+        logging.log(level=logging.DATA, msg="PICTURE: fixate_image, TIME: %s" % (current_time)) # logging fixate imgage and time shown
         instr2.draw()
         instrKey.setText('''Look at the cross and press any key to continue''')
         instrKey.draw()
         win.flip()
         if 'escape' in event.waitKeys():
             core.quit()
-        
+        now = datetime.now() # grab system time
+        current_time = now.strftime("%H:%M:%S:%f") # convert system time to string format
+        logging.log(level=logging.DATA, msg="FIXATED TIME: %s" % (current_time)) # logging fixate button press and time occured
     win.flip()
 
 # ending survey
@@ -492,7 +501,7 @@ except:
 # end of trigger code
 
 # 8 sec disdaq
-title.setText('')
+#title.setText('')
 fixation.setText("Please wait...")
 fixation.draw()
 win.flip()
@@ -506,7 +515,7 @@ while round<=incRounds:
     round+=1
 
 # play all exclusive rounds next
-while (round-incRounds)<=exRounds: 
+while (round-incRounds)<=exRounds:
     play_round()
     holder=1
     trialCnt=0
