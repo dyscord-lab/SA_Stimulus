@@ -25,8 +25,8 @@ from random import shuffle
 
 maxTime=75 #length of time that player is allowed to hold ball before round ends (should be 75)
 maxTrials=30 #number of throws allowed per round (should be 30)
-incRounds=1 #number of inclusive rounds - (should be 1)
-exRounds=3 #number of exclusive rounds - (should be 3)
+incRounds=0 #number of inclusive rounds - (should be 1)
+exRounds=0 #number of exclusive rounds - (should be 3)
 
 #set variables below
 holder=1
@@ -179,7 +179,7 @@ qlibrary = {1:q1, 2:q2, 3:q3, 4:q4, 5:q5, 6:q6, 7:q7, 8:q8, 9:q9, 10:q10, 11:q11
 questions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31] #list of qs
 
 # setting up the stimuli for eye-tracking
-piktures = 56 #numbers of pictures in folder # PHASE 2 CHANGE
+piktures = 28 #numbers of pictures in folder # PHASE 2 CHANGE
 pix = list(range(0, piktures))
 shuffle(pix) #randomized order of pictures
 
@@ -219,7 +219,7 @@ def show_images():
     core.wait(9)
     event.clearEvents()
     for k in pix:
-        pic = visual.ImageStim(win, image='showpics/%i.png' % (k+1))
+        pic = visual.ImageStim(win, image='showpics_2/%i.png' % (k+1))
         #logging.log(level=logging.DATA, msg="PICTURE: %i.png" % (k+1)) # logging picture order and time
         print(k+1)
         pic.size*=(0.7, 0.7) # resize images here (good at 0.7, 0.7 for lab mac)
@@ -229,12 +229,12 @@ def show_images():
         now = datetime.now() # grab system time
         current_time = now.strftime("%H:%M:%S:%f") # convert system time to string format
         logging.log(level=logging.DATA, msg="PICTURE: %i.png, TIME: %s" % (k+1, current_time)) # logging stimulus imgage # and time shown
-        core.wait(20) #set how long images stay (should be 20)
+        core.wait(.5) #set how long images stay (should be 20)
 
         # show the fixation image and instructions between trials
-        fixate_image =  visual.ImageStim(win, image= 'blank/fixation_cross.png')
+        fixate_image =  visual.ImageStim(win, image= 'showpics_2/fix.png')
         print(fixate_image)
-        fixate_image.size*=(0.2, 0.2) # resize image here
+        fixate_image.size*=(0.7, 0.7) # resize image here
         fixate_image.draw()
         fixate_image.draw()
         now = datetime.now() # grab system time
@@ -471,12 +471,12 @@ logging.log(level=logging.DATA, msg="START")
 logging.log(level=logging.DATA, msg="Intro Survey")
 
 #starting the INTRO SURVEY
-survey_intro()
-show_instructions()
-ready_screen.setText('''Press Space to start''')
-ready_screen.draw()
-win.flip()
-event.waitKeys(keyList=['space'])
+#survey_intro()
+#show_instructions()
+#ready_screen.setText('''Press Space to start''')
+#ready_screen.draw()
+#win.flip()
+#event.waitKeys(keyList=['space'])
 
 #################
 # Trigger scanner # WHAT DOES THIS DO ??
@@ -502,10 +502,10 @@ except:
 
 # 8 sec disdaq
 #title.setText('')
-fixation.setText("Please wait...")
-fixation.draw()
-win.flip()
-core.wait(1)
+#fixation.setText("Please wait...")
+#fixation.draw()
+#win.flip()
+#core.wait(1)
 
 # play all inclusive rounds first
 while round<=incRounds:
