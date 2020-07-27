@@ -36,8 +36,8 @@ mean(metrics$aromn)
 (15/nrow(metrics)) # 1.26% would be top 15 pics 
 (30/nrow(metrics)) # 2.51% would be top 30 pics 
 
-# identify 10% of photos so there is room for pairing
-num_pics <- ceiling(.10*nrow(metrics))
+# identify 7% of photos so there is room for pairing
+num_pics <- ceiling(.07*nrow(metrics))
 
 # identify top 5% so most explicit photos can be filtered out
 num_skip <- ceiling(.05*nrow(metrics))
@@ -80,7 +80,7 @@ unique(sort(filtered$desc))
 ### low valence ###
 
 # skip top 5% of valence photos to remove explixit once, 
-# then cut next 10% to keep for pairing
+# then cut next 7% to keep for pairing
 low_val =  filtered %>%
   arrange(valmn) %>%
   slice(num_skip:(num_skip+num_pics-1))
@@ -90,7 +90,7 @@ mean(low_val$valmn)
 
 ### high valence ###
   
-# cut highest 10% of valence photos to keep for pairing
+# cut highest 7% of valence photos to keep for pairing
 high_val =  filtered %>%
   arrange(desc(valmn)) %>%
   slice(1:num_pics)
