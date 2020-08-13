@@ -25,8 +25,8 @@ from random import shuffle
 
 maxTime=75 #length of time that player is allowed to hold ball before round ends (should be 75)
 maxTrials=30 #number of throws allowed per round (should be 30)
-incRounds=0 #number of inclusive rounds - (should be 1)
-exRounds=0 #number of exclusive rounds - (should be 3)
+incRounds=1 #number of inclusive rounds - (should be 1)
+exRounds=3 #number of exclusive rounds - (should be 3)
 
 #set variables below
 holder=1
@@ -50,6 +50,12 @@ When the ball is tossed to you, simply press either the "2" key to throw to the 
 
 What is important is not your ball tossing performance, but that you MENTALLY VISUALIZE the entire experience. Imagine what the other players look like. What sort of people are they? Where are you playing? Is it warm and sunny or cold and rainy? Create in your mind a complete mental picture of what might be going on if you were playing this game in real life.'''
 
+# create instructions for viewing IAPS photos
+instructions_iaps = '''
+You will now view a series of images. What is important is that you MENTALLY VISUALIZE the image.
+
+Create in your mind a complete mental picture of what might be going on if you were in the image in real life.'''
+
 # create GUI for subject information tracking
 subjDlg = gui.Dlg(title="App Task")
 subjDlg.addField('Enter Subject ID:')
@@ -63,7 +69,7 @@ if gui.OK:
     subj_id=subjDlg.data[0]
     player_name=subjDlg.data[1]
     round_number=subjDlg.data[2] #add round input
-    exp_cond=int(subjDlg.data[3]) #condition type: 0 (exclusion), 1 (inclusion)
+    exp_cond=int(subjDlg.data[3]) #condition type: 0 (exclusion), 1 (inclusion), 2 (positive IAPS), 3 (negative IAPS)
     try:
         room = int(subjDlg.data[2])-1
     except:
@@ -178,8 +184,13 @@ q31="I often worry that I will say or do wrong things."
 qlibrary = {1:q1, 2:q2, 3:q3, 4:q4, 5:q5, 6:q6, 7:q7, 8:q8, 9:q9, 10:q10, 11:q11, 12:q12, 13:q13, 14:q14, 15:q15, 16:q16, 17:q17, 18:q18, 19:q19, 20:q20, 21:q21, 22:q22, 23:q23, 24:q24, 25:q25, 26:q26, 27:q27, 28:q28, 29:q29, 30:q30, 31:q31}
 questions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31] #list of qs
 
+# setting up the iaps 
+piktures_iaps = 21 #numbers of pictures in folder
+pix_iaps = list(range(0, piktures_iaps))
+shuffle(pix_iaps) #randomized order of pictures
+
 # setting up the stimuli for eye-tracking
-piktures = 28 #numbers of pictures in folder # PHASE 2 CHANGE
+piktures = 14 #numbers of pictures in folder # PHASE 2 CHANGE
 pix = list(range(0, piktures))
 shuffle(pix) #randomized order of pictures
 
@@ -216,7 +227,7 @@ def show_images():
     event.waitKeys(keyList=['2'])
     imagestart.draw()
     win.flip()
-    core.wait(9)
+    core.wait(5)
     event.clearEvents()
     for k in pix:
         pic = visual.ImageStim(win, image='showpics_2/%i.png' % (k+1))
@@ -229,7 +240,7 @@ def show_images():
         now = datetime.now() # grab system time
         current_time = now.strftime("%H:%M:%S:%f") # convert system time to string format
         logging.log(level=logging.DATA, msg="PICTURE: %i.png, TIME: %s" % (k+1, current_time)) # logging stimulus imgage # and time shown
-        core.wait(.5) #set how long images stay (should be 20)
+        core.wait(20) #set how long images stay (should be 20)
 
         # show the fixation image and instructions between trials
         fixate_image =  visual.ImageStim(win, image= 'showpics_2/fix.png')
@@ -273,7 +284,7 @@ def survey_outro():
         logging.log(level=logging.DATA, msg="Question Number: %i , Response: %s" % (i, response))
 
 # Showing text and instructions for tossing game
-def show_instructions():
+def show_instructions_cyberball():
     title.setAutoDraw(True)
     instrText.setText(instructions1)
     instrText.setAutoDraw(True)
@@ -336,6 +347,21 @@ def show_instructions():
     instr_p1.setAutoDraw(False)
     instr_p2.setAutoDraw(False)
     instr_p3.setAutoDraw(False)
+
+def show_instructions_iaps():
+    title.setAutoDraw(True)
+    instrText.setText(instructions_iaps)
+    instrText.setAutoDraw(True)
+    win.flip()
+    instrKey.setText('''
+
+    PRESS 2 to continue''')
+    instrKey.draw()
+    win.flip()
+    event.waitKeys(keyList=['2'])
+    
+    instrText.setAutoDraw(False)
+    title.setAutoDraw(False)
 
 # setting up the player names
 def player_names(state=True):
@@ -409,7 +435,7 @@ def select_throw(): #runs if subject has ball
             ft = 0.3
 
         # if it's not the exclusionary condition or if it hasn't reached the right number of rounds, don't alter probability
-        else:
+        elif round<=incRounds or exp_cond==1:
             ft = 0.0
 
         # change equation so subject is less likely to recieve ball
@@ -462,21 +488,102 @@ def play_round():
     win.flip()
     core.wait(5)
 
+# show high valence IAPS images
+def show_iaps_pos():
+    event.clearEvents()
+    win.flip()
+    core.wait(5)
+    event.clearEvents()
+    for k in pix_iaps:
+        pic = visual.ImageStim(win, image='show_iaps/high_valence/%i.jpg' % (k+1))
+        #logging.log(level=logging.DATA, msg="PICTURE: %i.png" % (k+1)) # logging picture order and time
+        print(k+1)
+        pic.size*=(0.7, 0.7) # resize images here (good at 0.7, 0.7 for lab mac)
+        pic.draw()
+        pic.draw()
+        win.flip() # flips to show the image
+        now = datetime.now() # grab system time
+        current_time = now.strftime("%H:%M:%S:%f") # convert system time to string format
+        logging.log(level=logging.DATA, msg="PICTURE: %i.jpg, TIME: %s" % (k+1, current_time)) # logging stimulus imgage # and time shown
+        core.wait(20) #set how long images stay (should be 20)
+
+        # show the fixation image and instructions between trials
+        fixate_image =  visual.ImageStim(win, image= 'showpics_2/fix.png')
+        print(fixate_image)
+        fixate_image.size*=(0.7, 0.7) # resize image here
+        fixate_image.draw()
+        fixate_image.draw()
+        now = datetime.now() # grab system time
+        current_time = now.strftime("%H:%M:%S:%f") # convert system time to string format
+        logging.log(level=logging.DATA, msg="PICTURE: fixate_image, TIME: %s" % (current_time)) # logging fixate imgage and time shown
+        instr2.draw()
+        instrKey.setText('''Look at the cross and press any key to continue''')
+        instrKey.draw()
+        win.flip()
+        if 'escape' in event.waitKeys():
+            core.quit()
+        now = datetime.now() # grab system time
+        current_time = now.strftime("%H:%M:%S:%f") # convert system time to string format
+        logging.log(level=logging.DATA, msg="FIXATED TIME: %s" % (current_time)) # logging fixate button press and time occured
+    win.flip()
+
+# show low valence IAPS images
+def show_iaps_neg():
+    event.clearEvents()
+    win.flip()
+    core.wait(5)
+    event.clearEvents()
+    for k in pix_iaps:
+        pic = visual.ImageStim(win, image='show_iaps/low_valence/%i.jpg' % (k+1))
+        #logging.log(level=logging.DATA, msg="PICTURE: %i.png" % (k+1)) # logging picture order and time
+        print(k+1)
+        pic.size*=(0.7, 0.7) # resize images here (good at 0.7, 0.7 for lab mac)
+        pic.draw()
+        pic.draw()
+        win.flip() # flips to show the image
+        now = datetime.now() # grab system time
+        current_time = now.strftime("%H:%M:%S:%f") # convert system time to string format
+        logging.log(level=logging.DATA, msg="PICTURE: %i.jpg, TIME: %s" % (k+1, current_time)) # logging stimulus imgage # and time shown
+        core.wait(20) # set how long images stay (should be 20)
+
+        # show the fixation image and instructions between trials
+        fixate_image =  visual.ImageStim(win, image= 'showpics_2/fix.png')
+        print(fixate_image)
+        fixate_image.size*=(0.7, 0.7) # resize image here
+        fixate_image.draw()
+        fixate_image.draw()
+        now = datetime.now() # grab system time
+        current_time = now.strftime("%H:%M:%S:%f") # convert system time to string format
+        logging.log(level=logging.DATA, msg="PICTURE: fixate_image, TIME: %s" % (current_time)) # logging fixate imgage and time shown
+        instr2.draw()
+        instrKey.setText('''Look at the cross and press any key to continue''')
+        instrKey.draw()
+        win.flip()
+        if 'escape' in event.waitKeys():
+            core.quit()
+        now = datetime.now() # grab system time
+        current_time = now.strftime("%H:%M:%S:%f") # convert system time to string format
+        logging.log(level=logging.DATA, msg="FIXATED TIME: %s" % (current_time)) # logging fixate button press and time occured
+    win.flip()
+
 # ================================
 # setup logging #
 # ================================
 log_file = logging.LogFile("logs/%s.log" % (subj_id),  level=logging.DATA, filemode="w")
 logging.log(level=logging.DATA, msg="START")
 
-logging.log(level=logging.DATA, msg="Intro Survey")
-
 #starting the INTRO SURVEY
-#survey_intro()
-#show_instructions()
-#ready_screen.setText('''Press Space to start''')
-#ready_screen.draw()
-#win.flip()
-#event.waitKeys(keyList=['space'])
+logging.log(level=logging.DATA, msg="Intro Survey")
+survey_intro()
+
+if exp_cond==0 or exp_cond==1:
+    show_instructions_cyberball()
+else:
+    show_instructions_iaps()
+ready_screen.setText('''Press Space to start''')
+ready_screen.draw()
+win.flip()
+event.waitKeys(keyList=['space'])
 
 #################
 # Trigger scanner # WHAT DOES THIS DO ??
@@ -501,29 +608,34 @@ except:
 # end of trigger code
 
 # 8 sec disdaq
-#title.setText('')
-#fixation.setText("Please wait...")
-#fixation.draw()
-#win.flip()
-#core.wait(1)
+title.setText('')
+fixation.setText("Please wait...")
+fixation.draw()
+win.flip()
+core.wait(1)
 
-# play all inclusive rounds first
-while round<=incRounds:
-    play_round()
-    holder=1
-    trialCnt=0
-    round+=1
+if exp_cond==0 or exp_cond==1:
+    # play all inclusive rounds first
+    while round<=incRounds:
+        play_round()
+        holder=1
+        trialCnt=0
+        round+=1
 
-# play all exclusive rounds next
-while (round-incRounds)<=exRounds:
-    play_round()
-    holder=1
-    trialCnt=0
-    round+=1
+    # play all exclusive rounds next
+    while (round-incRounds)<=exRounds:
+        play_round()
+        holder=1
+        trialCnt=0
+        round+=1
+elif exp_cond==2: 
+    show_iaps_pos()
+else:
+    show_iaps_neg()
 
 # calling stimuli and final survey
-show_images() #show images
-survey_outro() #show survey again
+show_images() # show images
+survey_outro() # show survey again
 goodbye.setText('''You have completed this research study. Thank you for your participation!
 
 Please remove the eyetracker and get the experimenter. The experimenter will then give you more information about the purpose of this study and give you the opportunity to ask questions.''')
