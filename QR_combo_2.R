@@ -20,7 +20,7 @@ stimuli$rightdown <- rep("marker_02.png",nrow(stimuli))
 stimuli$leftup <- rep("marker_03.png",nrow(stimuli))
 stimuli$leftdown <- rep("marker_04.png",nrow(stimuli))
 
-#old code
+### old code ###
 # filling top left corner half with marker 2 and half with 3
 #stimuli$leftup <- rep("marker_02.png",nrow(stimuli))
 #stimuli$leftup[30:56] <- "marker_03.png"
@@ -41,7 +41,7 @@ stimuli$leftdown <- rep("marker_04.png",nrow(stimuli))
 # creating stimuli using data frame
 #===========================================================================
 
-install.packages(c("png", "jpeg", "grid", "gridExtra", "ggplot2"))
+# load required packages
 Packages <- c("png", "jpeg", "grid", "gridExtra", "ggplot2")
 lapply(Packages, library, character.only = TRUE)
 
@@ -81,7 +81,6 @@ for (i in 1:28) {
 # read in image
 fixate <- readPNG('../fix_cross.png')
 
-#
 setwd("../QR_codes/")
 # generate stim with QRs
 g <- arrangeGrob(rasterGrob(readPNG('marker_05.png')), rasterGrob(blank), rasterGrob(readPNG('marker_06.png')),
@@ -92,3 +91,60 @@ setwd("../")
 mypath <- "../showpics_2/"
 ggsave(file = paste0(mypath, "fix.png"), g) 
 
+#### generating iaps images ####
+
+setwd("../IAPS/high_valence")
+image_list_pos <- list.files()
+
+setwd("../low_valence")
+image_list_neg <- list.files()
+
+# adding image names to csv
+iaps <- data.frame(image_list_pos, image_list_neg, stringsAsFactors = FALSE)
+names(iaps) <- c("pos_image", "neg_image")
+
+setwd("../high_valence")
+
+# loop for high valence image generation
+for (i in 1:21) {
+  
+  #reading in stimuli image
+  imagename <- iaps[i, 1] 
+  image <- readJPEG(imagename)
+  
+  # creating grid image, reading the QR images at the same time
+  setwd("../../pictures_2/QR_codes")
+  g <- arrangeGrob(rasterGrob(readPNG(RUname)), rasterGrob(blank), rasterGrob(readPNG(LUname)),
+                   rasterGrob(blank), rasterGrob(image), rasterGrob(blank),
+                   rasterGrob(readPNG(RDname)), rasterGrob(blank), rasterGrob(readPNG(LDname)),
+                   ncol=3, widths = c(1,15,1), heights = c(.6,2,.6))
+  setwd("../../")
+  mypath <- "./show_iaps/high_valence/"
+  ggsave(file = paste0(mypath, i, ".png"), g) # "image_i.png" to have unique file names
+  #dev.off()
+  setwd("./IAPS/high_valence/")
+  
+}
+
+setwd("../low_valence")
+
+# loop for low valence image generation
+for (i in 1:21) {
+  
+  #reading in stimuli image
+  imagename <- iaps[i, 2] 
+  image <- readJPEG(imagename)
+  
+  # creating grid image, reading the QR images at the same time
+  setwd("../../pictures_2/QR_codes")
+  g <- arrangeGrob(rasterGrob(readPNG(RUname)), rasterGrob(blank), rasterGrob(readPNG(LUname)),
+                   rasterGrob(blank), rasterGrob(image), rasterGrob(blank),
+                   rasterGrob(readPNG(RDname)), rasterGrob(blank), rasterGrob(readPNG(LDname)),
+                   ncol=3, widths = c(1,15,1), heights = c(.6,2,.6))
+  setwd("../../")
+  mypath <- "./show_iaps/low_valence/"
+  ggsave(file = paste0(mypath, i, ".png"), g) # "image_i.png" to have unique file names
+  #dev.off()
+  setwd("./IAPS/low_valence/")
+  
+}
